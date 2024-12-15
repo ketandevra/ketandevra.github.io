@@ -61,7 +61,7 @@ const Dashbaord = () => {
           <Typography
             style={{ fontSize: 20, fontWeight: 600, color: "#f6e22b" }}
           >
-            सचिव
+            (सचिव)
           </Typography>
         </Grid><Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <img
