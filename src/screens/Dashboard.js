@@ -11,7 +11,7 @@ const Dashbaord = () => {
           <Typography
             style={{ fontSize: 60, fontWeight: 600, color: "#f6e22b" }}
           >
-            श्री क्षत्रीय घाँची युवा महासभा समिति, पाली, Rajsthan
+            श्री क्षत्रीय घाँची युवा महासभा समिति, पाली
           </Typography>
         </Grid>
       </Grid>
