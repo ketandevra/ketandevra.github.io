@@ -722,7 +722,7 @@ const Display = () => {
       </Typography>
 
       <Grid container spacing={2}>
-        <Grid size={{ xs: 6, md: 8, lg: 4 }}>
+        <Grid size={{ xs: 12, md: 12, lg: 4 }}>
           <div style={{ backgroundColor: "#00bf63" }}>
             <Typography
               style={{
@@ -787,7 +787,7 @@ const Display = () => {
             </Table>
           </TableContainer>
         </Grid>
-        <Grid size={{ xs: 6, md: 8, lg: 4 }}>
+        <Grid size={{ xs: 12, md: 12, lg: 4 }}>
           <div style={{ backgroundColor: "#004aad" }}>
             <Typography
               style={{
@@ -852,7 +852,7 @@ const Display = () => {
             </Table>
           </TableContainer>
         </Grid>
-        <Grid size={{ xs: 6, md: 8, lg: 4 }}>
+        <Grid size={{ xs: 12, md: 12, lg: 4 }}>
           <div style={{ backgroundColor: "#f80f30" }}>
             <Typography
               style={{
@@ -917,7 +917,7 @@ const Display = () => {
             </Table>
           </TableContainer>
         </Grid>
-        <Grid size={{ xs: 6, md: 8, lg: 4 }}>
+        <Grid size={{ xs: 12, md: 12, lg: 4 }}>
           <div style={{ backgroundColor: "#00bf63" }}>
             <Typography
               style={{
@@ -982,7 +982,7 @@ const Display = () => {
             </Table>
           </TableContainer>
         </Grid>
-        <Grid size={{ xs: 6, md: 8, lg: 4 }}>
+        <Grid size={{ xs: 12, md: 12, lg: 4 }}>
           <div style={{ backgroundColor: "#004aad" }}>
             <Typography
               style={{
@@ -1047,7 +1047,7 @@ const Display = () => {
             </Table>
           </TableContainer>
         </Grid>
-        <Grid size={{ xs: 6, md: 8, lg: 4 }}>
+        <Grid size={{ xs: 12, md: 12, lg: 4 }}>
           <div style={{ backgroundColor: "#f80f30" }}>
             <Typography
               style={{
@@ -1112,7 +1112,7 @@ const Display = () => {
             </Table>
           </TableContainer>
         </Grid>
-        <Grid size={{ xs: 6, md: 8, lg: 4 }}>
+        <Grid size={{ xs: 12, md: 12, lg: 4 }}>
           <div style={{ backgroundColor: "#00bf63" }}>
             <Typography
               style={{
@@ -1177,7 +1177,7 @@ const Display = () => {
             </Table>
           </TableContainer>
         </Grid>
-        <Grid size={{ xs: 6, md: 8, lg: 4 }}>
+        <Grid size={{ xs: 12, md: 12, lg: 4 }}>
           <div style={{ backgroundColor: "#004aad" }}>
             <Typography
               style={{
