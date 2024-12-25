@@ -14,12 +14,13 @@ const CricketPlayerCard = () => {
       <Grid container spacing={4} justifyContent="center">
         {players.map((player) => (
           <Grid item xs={12} sm={6} md={3} key={player.playerId}>
+            {console.log("url: ", ``)}
             <Link to={`/player/${player.playerId}`} style={{ textDecoration: 'none' }}>
               <Card sx={{ maxWidth: 345, borderRadius: '8px', boxShadow: 3, textAlign: 'center' }}>
                 <CardMedia
                   component="img"
                   height="300"
-                  image={player.playerImage} // Player photo URL
+                  image={`https://drive.google.com/thumbnail?id=${player.playerImage}&sz=w1000`} // Player photo URL
                   alt={player.name}
                   sx={{ objectFit: 'cover' }}
                 />

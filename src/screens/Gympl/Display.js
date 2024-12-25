@@ -733,7 +733,7 @@ const Display = () => {
                 textAlign: "center",
               }}
             >
-              Solanki Fighters
+              सोलंकी फाइटर्स
             </Typography>
           </div>
           <TableContainer component={Paper}>
@@ -798,7 +798,7 @@ const Display = () => {
                 textAlign: "center",
               }}
             >
-              GCC Royals
+              जीसीसी रॉयल्स
             </Typography>
           </div>
           <TableContainer component={Paper}>
@@ -863,7 +863,7 @@ const Display = () => {
                 textAlign: "center",
               }}
             >
-              Shree Nath Ji Club
+              श्री नाथ जी क्लब
             </Typography>
           </div>
           <TableContainer component={Paper}>
@@ -928,7 +928,7 @@ const Display = () => {
                 textAlign: "center",
               }}
             >
-              Trophy Fighter
+              ट्रॉफी फाइटर्स
             </Typography>
           </div>
           <TableContainer component={Paper}>
@@ -993,7 +993,7 @@ const Display = () => {
                 textAlign: "center",
               }}
             >
-              Maa Tanod Club
+              माँ तनोड क्लब
             </Typography>
           </div>
           <TableContainer component={Paper}>
@@ -1058,7 +1058,7 @@ const Display = () => {
                 textAlign: "center",
               }}
             >
-              Zafri Super
+              ज़ाफ़री सुपर
             </Typography>
           </div>
           <TableContainer component={Paper}>
@@ -1123,7 +1123,7 @@ const Display = () => {
                 textAlign: "center",
               }}
             >
-              Kisan Eleveen
+              किसान एलेवन्स
             </Typography>
           </div>
           <TableContainer component={Paper}>
@@ -1188,7 +1188,7 @@ const Display = () => {
                 textAlign: "center",
               }}
             >
-              Ganpati Silk Mills
+              गणपति सुपर किंग्स
             </Typography>
           </div>
           <TableContainer component={Paper}>

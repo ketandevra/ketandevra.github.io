@@ -79,8 +79,11 @@ const Navbar = () => {
           <ListItem button component={Link} to="/">
             <ListItemText primary="Home" />
           </ListItem>
-          <ListItem button component={Link} to="/about">
-            <ListItemText primary="About" />
+          <ListItem button component={Link} to="/teams">
+            <ListItemText primary="Teams" />
+          </ListItem>
+          <ListItem button component={Link} to="/cricket">
+            <ListItemText primary="Players" />
           </ListItem>
           <ListItem button component={Link} to="/contact">
             <ListItemText primary="Contact" />
