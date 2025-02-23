@@ -295,11 +295,11 @@ export default function BloodDonor() {
       </div>
 
       {/* Donors List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredDonors.map((donor) => (
           <div
             key={donor.id}
-            className="bg-white rounded-lg border p-6 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white rounded-lg p-6 shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300"
           >
             <div className="flex justify-between items-start">
               <div>

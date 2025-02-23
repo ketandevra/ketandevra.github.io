@@ -1,9 +1,22 @@
 'use client';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import CountUp from 'react-countup';
 
 export default function Expenses() {
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    // Check if we've animated before in this session
+    const hasAnimated = sessionStorage.getItem('expensesAnimated');
+    if (!hasAnimated) {
+      setShouldAnimate(true);
+      sessionStorage.setItem('expensesAnimated', 'true');
+    }
+  }, []);
+  
   const expensesData = {
-    totalExpenses: "₹13,100",
+    totalExpenses: 13100,
     expenses: [
       {
         serialNumber: "1",
@@ -37,7 +50,7 @@ export default function Expenses() {
   };
 
   return (
-    <main className="container mx-auto px-4 py-8 overflow-x-hidden">
+    <main className="px-4 py-8 overflow-x-hidden">
       {/* Back Button */}
       <div className="mb-8">
         <div className="mb-4 sm:hidden">
@@ -86,13 +99,24 @@ export default function Expenses() {
         <h1 className="sm:hidden text-3xl font-bold text-red-700 text-center">खर्च प्रबंधन</h1>
       </div>
 
-      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="bg-white rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-6">
         <div className="mb-8">
           <div className="w-full">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-red-100 p-4 rounded-lg border border-red-200">
+              <div className="bg-red-100 p-4 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300">
                 <h3 className="text-lg font-medium text-red-900">खर्च राशि</h3>
-                <p className="text-3xl font-bold text-red-800">{expensesData.totalExpenses}</p>
+                <p className="text-3xl font-bold text-red-800">
+                  ₹{!shouldAnimate ? (
+                    "13,100"
+                  ) : (
+                    <CountUp 
+                      end={expensesData.totalExpenses} 
+                      duration={2.5}
+                      separator=","
+                      preserveValue={true}
+                    />
+                  )}
+                </p>
               </div>
             </div>
           </div>

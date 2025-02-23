@@ -15,7 +15,7 @@ const Footer = () => {
               height={32}
               priority
             />
-            <span className="font-semibold">श्री क्षत्रीय घाँची युवा महासभा समिति</span>
+            <span className="font-semibold">श्री क्षत्रीय घाँची युवा महासभा समिति, पाली</span>
           </Link>
           <p className="text-sm text-gray-600 dark:text-gray-300">
             समाज के युवाओं को एकजुट करने और उनके विकास के लिए समर्पित

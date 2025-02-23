@@ -16,7 +16,7 @@ const Navbar = () => {
             className="w-8 h-8"
           />
           <Link href="/">
-            <span className="text-lg font-semibold text-gray-900 dark:text-white">श्री क्षत्रीय घाँची युवा महासभा समिति</span>
+            <span className="text-lg font-semibold text-gray-900 dark:text-white">श्री क्षत्रीय घाँची युवा महासभा समिति, पाली</span>
           </Link>
         </div>
         <div className="flex gap-6">
@@ -30,7 +30,7 @@ const Navbar = () => {
 
       {/* Mobile Top Header */}
       <div className="sm:hidden flex items-center justify-center px-4 py-2 bg-white dark:bg-gray-800 shadow-sm">
-        <span className="text-sm font-semibold text-gray-900 dark:text-white">श्री क्षत्रीय घाँची युवा महासभा समिति</span>
+        <span className="text-sm font-semibold text-gray-900 dark:text-white">श्री क्षत्रीय घाँची युवा महासभा समिति, पाली</span>
       </div>
 
       {/* Mobile Bottom Navigation */}

@@ -26,7 +26,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {/* Funds Section */}
           <Link href="/fund" className="group">
-            <div className="border rounded-lg hover:shadow-lg transition-shadow bg-white">
+            <div className="rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300 bg-white">
               <div className="w-full aspect-[3/2] relative">
                 <Image
                   src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2071&auto=format&fit=crop"
@@ -63,7 +63,7 @@ export default function Home() {
 
           {/* Events Section */}
           <Link href="/event" className="group">
-            <div className="border rounded-lg hover:shadow-lg transition-shadow bg-white">
+            <div className="rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300 bg-white">
               <div className="w-full aspect-[3/2] relative">
                 <Image
                   src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069&auto=format&fit=crop"
@@ -102,7 +102,7 @@ export default function Home() {
 
           {/* Committee Section */}
           <Link href="/committee" className="group">
-            <div className="border rounded-lg hover:shadow-lg transition-shadow bg-white">
+            <div className="rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300 bg-white">
               <div className="w-full aspect-[3/2] relative">
                 <Image
                   src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1974&auto=format&fit=crop"
@@ -139,7 +139,7 @@ export default function Home() {
 
           {/* Blood Donor Section */}
           <Link href="/blood-donor" className="group">
-            <div className="border rounded-lg hover:shadow-lg transition-shadow bg-white">
+            <div className="rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300 bg-white">
               <div className="w-full aspect-[3/2] relative">
                 <Image
                   src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=2070&auto=format&fit=crop"
@@ -178,7 +178,7 @@ export default function Home() {
 
           {/* Matrimonial Section */}
           <Link href="/matrimonial" className="group">
-            <div className="border rounded-lg hover:shadow-lg transition-shadow bg-white">
+            <div className="rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300 bg-white">
               <div className="w-full aspect-[3/2] relative">
                 <Image
                   src="https://images.unsplash.com/photo-1583939411023-14783179e581?q=80&w=2070&auto=format&fit=crop"

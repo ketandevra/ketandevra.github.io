@@ -1,11 +1,24 @@
 'use client';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import CountUp from 'react-countup';
 
 export default function Income() {
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    // Check if we've animated before in this session
+    const hasAnimated = sessionStorage.getItem('incomeAnimated');
+    if (!hasAnimated) {
+      setShouldAnimate(true);
+      sessionStorage.setItem('incomeAnimated', 'true');
+    }
+  }, []);
+
   const incomeData = {
-    totalAmount: "₹1,53,745",
-    receivedAmount: "₹1,48,000",
-    interestEarned: "₹5,745",
+    totalAmount: 153745,
+    receivedAmount: 148000,
+    interestEarned: 5745,
     incomes: [
         {
             "serialNumber": "1",
@@ -74,8 +87,8 @@ export default function Income() {
   };
 
   return (
-    <main className="container mx-auto px-4 py-8 overflow-x-hidden">
-      {/* Back Button */}
+    <main className="px-4 py-8 overflow-x-hidden">
+      {/* Back Button and Title */}
       <div className="mb-8">
         <div className="mb-4 sm:hidden">
           <Link 
@@ -123,21 +136,54 @@ export default function Income() {
         <h1 className="sm:hidden text-3xl font-bold text-green-700 text-center">आय प्रबंधन</h1>
       </div>
 
-      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="bg-white rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-6">
         <div className="mb-8">
           <div className="w-full">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-green-100 p-4 rounded-lg border border-green-200">
+              <div className="bg-green-100 p-4 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300">
                 <h3 className="text-lg font-medium text-green-900">प्राप्त राशि</h3>
-                <p className="text-3xl font-bold text-green-800">{incomeData.receivedAmount}</p>
+                <p className="text-3xl font-bold text-green-800">
+                  ₹{!shouldAnimate ? (
+                    "148,000"
+                  ) : (
+                    <CountUp 
+                      end={incomeData.receivedAmount} 
+                      duration={2.5}
+                      separator=","
+                      preserveValue={true}
+                    />
+                  )}
+                </p>
               </div>
-              <div className="bg-blue-100 p-4 rounded-lg border border-blue-200">
-                <h3 className="text-lg font-medium text-blue-900">कुल अर्जित ब्याज</h3>
-                <p className="text-3xl font-bold text-blue-800">{incomeData.interestEarned}</p>
+              <div className="bg-blue-100 p-4 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300">
+                <h3 className="text-lg font-medium text-blue-900">कुल ब्याज अर्जित</h3>
+                <p className="text-3xl font-bold text-blue-800">
+                  ₹{!shouldAnimate ? (
+                    "5,745"
+                  ) : (
+                    <CountUp 
+                      end={incomeData.interestEarned} 
+                      duration={2.5}
+                      separator=","
+                      preserveValue={true}
+                    />
+                  )}
+                </p>
               </div>
-              <div className="bg-purple-100 p-4 rounded-lg border border-purple-200">
+              <div className="bg-purple-100 p-4 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300">
                 <h3 className="text-lg font-medium text-purple-900">कुल राशि</h3>
-                <p className="text-3xl font-bold text-purple-800">{incomeData.totalAmount}</p>
+                <p className="text-3xl font-bold text-purple-800">
+                  ₹{!shouldAnimate ? (
+                    "153,745"
+                  ) : (
+                    <CountUp 
+                      end={incomeData.totalAmount} 
+                      duration={2.5}
+                      separator=","
+                      preserveValue={true}
+                    />
+                  )}
+                </p>
               </div>
             </div>
           </div>
