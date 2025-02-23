@@ -28,7 +28,7 @@ export default function Expenses() {
       },
       {
         serialNumber: "4",
-        date: "2024-03-01",
+        date: "25-08-2024",
         name: "पोहा",
         description: "रामदेवरा के लिए पोहा",
         amount: "₹8,100"

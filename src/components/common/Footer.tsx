@@ -29,6 +29,8 @@ const Footer = () => {
             <li><Link href="/fund" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">कोष</Link></li>
             <li><Link href="/event" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">कार्यक्रम</Link></li>
             <li><Link href="/committee" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">कमिटी</Link></li>
+            <li><Link href="/blood-donor" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">रक्तदाता</Link></li>
+            <li><Link href="/matrimonial" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">मैट्रिमोनियल्स</Link></li>
           </ul>
         </div>
 
