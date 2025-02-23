@@ -1,9 +1,9 @@
 {
-  "/committee/page": "app/committee/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/matrimonial/page": "app/matrimonial/page.js",
-  "/event/page": "app/event/page.js",
   "/blood-donor/page": "app/blood-donor/page.js",
+  "/page": "app/page.js",
   "/committee-list/page": "app/committee-list/page.js",
-  "/page": "app/page.js"
+  "/committee/page": "app/committee/page.js",
+  "/event/page": "app/event/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/fund/page": "app/fund/page.js"
 }
