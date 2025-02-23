@@ -7,7 +7,7 @@ export default function Home() {
       {/* Banner Image */}
       <div className="w-full aspect-[16/7] relative">
         <Image
-          src="/images/banner.png"
+          src="/nextjs-github-pages/images/banner.png"
           alt="Banner Image"
           fill
           className="object-cover"

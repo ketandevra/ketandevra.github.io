@@ -5,25 +5,25 @@ export default function Committee() {
     {
       name: "योगेश सोलंकी",
       position: "अध्यक्ष",
-      photo: "/images/yogesh.jpg",
+      photo: "/nextjs-github-pages/images/yogesh.jpg",
       mobile: "93529 45791"
     },
     {
       name: "जितेन्द्र पंवार",
       position: "उपाध्यक्ष",
-      photo: "/images/jitu.jpg",
+      photo: "/nextjs-github-pages/images/jitu.jpg",
       mobile: "94600 88701"
     },
     {
       name: "सुरेश परिहार",
       position: "सचिव",
-      photo: "/images/suresh.jpg",
+      photo: "/nextjs-github-pages/images/suresh.jpg",
       mobile: "94141 22178"
     },
     {
       name: "दीपक देवड़ा",
       position: "कोषाध्यक्ष",
-      photo: "/images/deepak.jpg",
+      photo: "/nextjs-github-pages/images/deepak.jpg",
       mobile: "98290 21138"
     }
   ];

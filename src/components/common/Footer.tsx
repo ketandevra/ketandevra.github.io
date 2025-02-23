@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/logo.svg"
+              src="/nextjs-github-pages/logo.svg"
               alt="श्री क्षत्रीय घाँची युवा महासभा समिति Logo"
               width={32}
               height={32}
