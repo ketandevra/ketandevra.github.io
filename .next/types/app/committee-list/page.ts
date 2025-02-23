@@ -1,4 +1,4 @@
-// File: /Users/ketandevra/cff/webapps/ketandevra.github.io/src/app/committee-list/page.tsx
+// File: /Users/ketandevra/cff/On Producation/WebApplications/GhanchiSamajPali/ketandevra.github.io/src/app/committee-list/page.tsx
 import * as entry from '../../../../src/app/committee-list/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

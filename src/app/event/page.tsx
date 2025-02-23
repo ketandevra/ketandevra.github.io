@@ -49,14 +49,14 @@ export default function Event() {
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-black mb-4">कार्यक्रम</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">कार्यक्रम</h1>
         <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
       </div>
       
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {[...events].reverse().map((event) => (
-          <div key={event.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <div className="aspect-[3/2] w-full relative">
+          <div key={event.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300 overflow-hidden">
+            <div className="aspect-[3/3] w-full relative">
               <Image 
                 src={event.photo}
                 alt={event.NameHindi}

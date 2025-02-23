@@ -263,21 +263,21 @@ export default function BloodDonor() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-black mb-4">रक्तदाता</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">रक्तदाता</h1>
         <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
       </div>
 
       {/* Blood Group Filter */}
       <div className="flex justify-end mb-8 px-4">
         <div className="w-64">
-          <label className="block text-base font-medium text-gray-800 mb-2">
+          <label className="block text-base font-medium text-gray-800 dark:text-gray-200 mb-2">
             रक्त समूह के अनुसार छांटें
           </label>
           <div className="relative">
             <select
               value={selectedBloodGroup}
               onChange={(e) => setSelectedBloodGroup(e.target.value)}
-              className="block w-full rounded-lg border border-gray-300 px-4 pr-10 py-3 text-lg text-gray-800 bg-white appearance-none"
+              className="block w-full rounded-lg border border-gray-300 dark:border-gray-600 px-4 pr-10 py-3 text-lg text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-700 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               {bloodGroups.map((group) => (
                 <option key={group} value={group}>
@@ -285,7 +285,7 @@ export default function BloodDonor() {
                 </option>
               ))}
             </select>
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 dark:text-gray-300">
               <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
               </svg>
@@ -299,19 +299,19 @@ export default function BloodDonor() {
         {filteredDonors.map((donor) => (
           <div
             key={donor.id}
-            className="bg-white rounded-lg p-6 shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300"
+            className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-all duration-300"
           >
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="font-semibold text-xl mb-3 text-gray-800">
+                <h3 className="font-semibold text-xl mb-3 text-gray-800 dark:text-gray-100">
                   {donor.name}
                 </h3>
-                <p className="text-gray-700 text-base mb-2">{donor.address}</p>
-                <p className="text-gray-700 text-base">
+                <p className="text-gray-700 dark:text-gray-300 text-base mb-2">{donor.address}</p>
+                <p className="text-gray-700 dark:text-gray-300 text-base">
                   <span className="font-medium">Mobile:</span> {donor.mobile}
                 </p>
               </div>
-              <div className="bg-red-100 text-red-800 px-4 py-2 rounded-full text-base font-medium">
+              <div className="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100 px-4 py-2 rounded-full text-base font-medium">
                 {donor.bloodGroup}
               </div>
             </div>
@@ -322,7 +322,7 @@ export default function BloodDonor() {
           <div className="col-span-3 flex items-center justify-center min-h-[400px]">
             <div className="text-center">
               <svg 
-                className="mx-auto h-12 w-12 text-gray-400 mb-4" 
+                className="mx-auto h-12 w-12 text-gray-400 dark:text-gray-600 mb-4" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -334,7 +334,7 @@ export default function BloodDonor() {
                   d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
                 />
               </svg>
-              <p className="text-gray-700 text-lg">
+              <p className="text-gray-700 dark:text-gray-300 text-lg">
                 चयनित रक्त समूह के लिए कोई रक्तदाता नहीं मिला।
               </p>
             </div>

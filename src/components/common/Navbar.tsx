@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ThemeToggle from "../ThemeToggle";
 
 const Navbar = () => {
   return (
@@ -19,18 +20,20 @@ const Navbar = () => {
             <span className="text-lg font-semibold text-gray-900 dark:text-white">श्री क्षत्रीय घाँची युवा महासभा समिति, पाली</span>
           </Link>
         </div>
-        <div className="flex gap-6">
+        <div className="flex items-center gap-6">
           <Link href="/fund" className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">कोष</Link>
           <Link href="/event" className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">कार्यक्रम</Link>
           <Link href="/committee" className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">कमिटी</Link>
           <Link href="/blood-donor" className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">रक्तदाता</Link>
           <Link href="/matrimonial" className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">मैट्रिमोनियल्स</Link>
+          <ThemeToggle />
         </div>
       </nav>
 
       {/* Mobile Top Header */}
-      <div className="sm:hidden flex items-center justify-center px-4 py-2 bg-white dark:bg-gray-800 shadow-sm">
+      <div className="sm:hidden flex items-center justify-between px-4 py-2 bg-white dark:bg-gray-800 shadow-sm">
         <span className="text-sm font-semibold text-gray-900 dark:text-white">श्री क्षत्रीय घाँची युवा महासभा समिति, पाली</span>
+        <ThemeToggle />
       </div>
 
       {/* Mobile Bottom Navigation */}

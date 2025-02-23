@@ -1,4 +1,4 @@
-// File: /Users/ketandevra/cff/webapps/ketandevra.github.io/src/app/event/page.tsx
+// File: /Users/ketandevra/cff/On Producation/WebApplications/GhanchiSamajPali/ketandevra.github.io/src/app/event/page.tsx
 import * as entry from '../../../../src/app/event/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
