@@ -5,6 +5,7 @@ import yogeshImage from "../../assets/yogesh.jpg"; // Replace with actual image
 import jituImage from "../../assets/jitu.jpg"; // Replace with actual image
 import sureshImage from "../../assets/suresh.jpg"; // Replace with actual image
 import deepakImage from "../../assets/deepak.jpg"; // Replace with actual image
+import coverImage from "../../assets/cover.png";
 
 const Home = () => {
   return (
@@ -29,9 +30,9 @@ const Home = () => {
           Building a stronger community together.
         </Typography>
       </Box> */}
+      <img src={coverImage} style={{ width: "100%", height: 700 }}/>
       <Box sx={{ padding: '20px' }}>
         <Typography
-          variant="h4"
           sx={{ fontWeight: "bold", textAlign: "center", marginBottom: 4 }}
         >
           समिति
@@ -42,7 +43,7 @@ const Home = () => {
             <Card>
               <CardMedia
                 component="img"
-                height="400"
+                height="200"
                 image={yogeshImage}
                 alt="Achievements"
               />
@@ -65,7 +66,7 @@ const Home = () => {
             <Card>
               <CardMedia
                 component="img"
-                height="400"
+                height="200"
                 image={jituImage}
                 alt="Achievements"
               />
@@ -88,7 +89,7 @@ const Home = () => {
             <Card>
               <CardMedia
                 component="img"
-                height="400"
+                height="200"
                 image={sureshImage}
                 alt="Achievements"
               />
@@ -111,7 +112,7 @@ const Home = () => {
             <Card>
               <CardMedia
                 component="img"
-                height="400"
+                height="200"
                 image={deepakImage}
                 alt="Achievements"
               />
