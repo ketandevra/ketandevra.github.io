@@ -23,7 +23,7 @@ export default function Fund() {
                 <p className="text-xl font-bold text-green-700">₹148,000</p>
               </div>
               <div className="p-4 bg-green-50 rounded-lg">
-                <h3 className="font-medium mb-2 text-green-800">अर्जित ब्याज</h3>
+                <h3 className="font-medium mb-2 text-green-800">ब्याज अर्जित</h3>
                 <p className="text-xl font-bold text-green-700">₹5,745</p>
               </div>
               <div className="p-4 bg-green-50 rounded-lg">
