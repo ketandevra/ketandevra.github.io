@@ -614,6 +614,9 @@ video {
 .aspect-\[3\/3\] {
   aspect-ratio: 3/3;
 }
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
 .h-1 {
   height: 0.25rem;
 }
@@ -637,9 +640,6 @@ video {
 }
 .h-full {
   height: 100%;
-}
-.min-h-\[60vh\] {
-  min-height: 60vh;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1072,6 +1072,11 @@ body {
   color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-blue-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity, 1));
+}
+
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
@@ -1175,11 +1180,6 @@ body {
   .dark\:bg-gray-800 {
     --tw-bg-opacity: 1;
     background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
-  }
-
-  .dark\:text-gray-200 {
-    --tw-text-opacity: 1;
-    color: rgb(229 231 235 / var(--tw-text-opacity, 1));
   }
 
   .dark\:text-gray-300 {

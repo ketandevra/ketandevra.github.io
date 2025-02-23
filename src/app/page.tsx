@@ -7,7 +7,7 @@ export default function Home() {
       {/* Banner Image */}
       <div className="w-full aspect-[16/7] relative">
         <Image
-          src="/banner.png"
+          src="/images/banner.png"
           alt="Banner Image"
           fill
           className="object-cover"

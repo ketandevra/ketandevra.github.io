@@ -1,13 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import Link from 'next/link';
-
-interface ExpenseData {
-  range: string;
-  majorDimension: string;
-  values: string[][];
-}
 
 export default function Expenses() {
   const expensesData = {

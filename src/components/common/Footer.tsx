@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Company Info */}
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/logo.svg"
               alt="श्री क्षत्रीय घाँची युवा महासभा समिति Logo"
@@ -15,10 +15,8 @@ const Footer = () => {
               height={32}
               priority
             />
-            <a href="/">
             <span className="font-semibold">श्री क्षत्रीय घाँची युवा महासभा समिति</span>
-            </a>
-          </div>
+          </Link>
           <p className="text-sm text-gray-600 dark:text-gray-300">
             समाज के युवाओं को एकजुट करने और उनके विकास के लिए समर्पित
           </p>
