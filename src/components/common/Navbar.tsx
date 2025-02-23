@@ -24,6 +24,7 @@ const Navbar = () => {
           <Link href="/event" className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">कार्यक्रम</Link>
           <Link href="/committee" className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">कमिटी</Link>
           <Link href="/blood-donor" className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">रक्तदाता</Link>
+          <Link href="/matrimonial" className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">मैट्रिमोनियल्स</Link>
         </div>
       </nav>
 

@@ -38,21 +38,57 @@ export default function Expenses() {
 
   return (
     <main className="container mx-auto px-4 py-8 overflow-x-hidden">
-      {/* Breadcrumbs */}
-      <nav className="flex mb-4 text-sm">
-        <Link href="/fund" className="text-gray-500 hover:text-gray-700">
-          कोष
-        </Link>
-        <span className="mx-2 text-gray-500">/</span>
-        <span className="text-gray-900">खर्च</span>
-      </nav>
+      {/* Back Button */}
+      <div className="mb-8">
+        <div className="mb-4 sm:hidden">
+          <Link 
+            href="/fund" 
+            className="inline-flex items-center px-4 py-2 bg-white text-red-600 rounded-lg border border-red-200 hover:bg-red-50 transition-colors"
+          >
+            <svg 
+              className="w-5 h-5 mr-2" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            वापस जाएं
+          </Link>
+        </div>
+        <div className="relative hidden sm:block">
+          <Link 
+            href="/fund" 
+            className="absolute left-0 top-1/2 -translate-y-1/2 inline-flex items-center px-4 py-2 bg-white text-red-600 rounded-lg border border-red-200 hover:bg-red-50 transition-colors"
+          >
+            <svg 
+              className="w-5 h-5 mr-2" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            वापस जाएं
+          </Link>
+          <h1 className="text-3xl font-bold text-red-700 text-center">खर्च प्रबंधन</h1>
+        </div>
+        <h1 className="sm:hidden text-3xl font-bold text-red-700 text-center">खर्च प्रबंधन</h1>
+      </div>
 
-      <h1 className="text-4xl font-bold text-red-700 mb-8">खर्च प्रबंधन</h1>
-      
       <div className="bg-white rounded-xl shadow-lg p-6">
-        <div className="mb-8 overflow-x-auto">
-          <div className="min-w-[768px] md:min-w-full">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Summary</h2>
+        <div className="mb-8">
+          <div className="w-full">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-red-100 p-4 rounded-lg border border-red-200">
                 <h3 className="text-lg font-medium text-red-900">खर्च राशि</h3>

@@ -24,7 +24,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="font-semibold mb-4">Quick Links</h3>
+          <h3 className="font-semibold mb-4">महत्वपूर्ण लिंक</h3>
           <ul className="space-y-2 text-sm">
             <li><Link href="/fund" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">कोष</Link></li>
             <li><Link href="/event" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">कार्यक्रम</Link></li>
@@ -36,7 +36,7 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="font-semibold mb-4">Contact Us</h3>
+          <h3 className="font-semibold mb-4">संपर्क करें</h3>
           <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
             <li className="flex items-center gap-2">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@ const Footer = () => {
 
         {/* Social Links */}
         <div>
-          <h3 className="font-semibold mb-4">Follow Us</h3>
+          <h3 className="font-semibold mb-4">हमें फॉलो करें</h3>
           <div className="flex gap-4">
             <a href="https://www.facebook.com/ghanchisamajindia" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

@@ -273,17 +273,24 @@ export default function BloodDonor() {
           <label className="block text-base font-medium text-gray-800 mb-2">
             रक्त समूह के अनुसार छांटें
           </label>
-          <select
-            value={selectedBloodGroup}
-            onChange={(e) => setSelectedBloodGroup(e.target.value)}
-            className="block w-full rounded-lg border border-gray-300 px-4 py-3 text-lg text-gray-800 bg-white"
-          >
-            {bloodGroups.map((group) => (
-              <option key={group} value={group}>
-                {group}
-              </option>
-            ))}
-          </select>
+          <div className="relative">
+            <select
+              value={selectedBloodGroup}
+              onChange={(e) => setSelectedBloodGroup(e.target.value)}
+              className="block w-full rounded-lg border border-gray-300 px-4 pr-10 py-3 text-lg text-gray-800 bg-white appearance-none"
+            >
+              {bloodGroups.map((group) => (
+                <option key={group} value={group}>
+                  {group}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -312,8 +319,25 @@ export default function BloodDonor() {
         ))}
 
         {filteredDonors.length === 0 && (
-          <div className="col-span-2 text-center py-12 text-gray-700 text-lg">
-            चयनित रक्त समूह के लिए कोई दाता नहीं मिला।
+          <div className="col-span-3 flex items-center justify-center min-h-[400px]">
+            <div className="text-center">
+              <svg 
+                className="mx-auto h-12 w-12 text-gray-400 mb-4" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                />
+              </svg>
+              <p className="text-gray-700 text-lg">
+                चयनित रक्त समूह के लिए कोई रक्तदाता नहीं मिला।
+              </p>
+            </div>
           </div>
         )}
       </div>

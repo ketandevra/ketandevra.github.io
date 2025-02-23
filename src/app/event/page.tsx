@@ -56,7 +56,7 @@ export default function Event() {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {[...events].reverse().map((event) => (
           <div key={event.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <div className="aspect-[3/3] w-full relative">
+            <div className="aspect-[3/2] w-full relative">
               <Image 
                 src={event.photo}
                 alt={event.NameHindi}

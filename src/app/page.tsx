@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Committee from "./committee/page";
 
 export default function Home() {
   return (
@@ -15,8 +16,13 @@ export default function Home() {
         />
       </div>
 
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-black mb-4">हमारी सेवाएँ</h1>
+        <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
       {/* Main Sections */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {/* Funds Section */}
           <Link href="/fund" className="group">
@@ -199,6 +205,8 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
+      <Committee />
     </main>
   );
 }
