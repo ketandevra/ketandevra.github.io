@@ -21,45 +21,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/_not-found/page.js"
     ],
-    "/matrimonial/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/matrimonial/page.js"
-    ],
-    "/blood-donor/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/blood-donor/page.js"
-    ],
-    "/committee/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/committee/page.js"
-    ],
     "/event/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/event/page.js"
     ],
-    "/fund/page": [
+    "/event/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/fund/page.js"
-    ],
-    "/expenses/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/expenses/page.js"
-    ],
-    "/income/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/income/page.js"
-    ],
-    "/committee-list/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/committee-list/page.js"
+      "static/chunks/app/event/[id]/page.js"
     ]
   }
 }
