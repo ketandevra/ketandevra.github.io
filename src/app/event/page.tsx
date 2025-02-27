@@ -51,7 +51,15 @@ export default function Event() {
       date: '22-02-2025',
       location: 'सूरजपोल चौराह, पाली',
       photo: '/ketandevra.github.io/images/event5.jpeg'
-    }
+    },
+    {
+      id: 6,
+      NameHindi: 'जीतेन्द्र जी पँवार द्वारा रक्तदान - 26 फरवरी 2025',
+      DescriptionHindi: 'जीतेन्द्र जी पँवार द्वारा 26 फरवरी 2025 को किया गया रक्तदान निस्संदेह किसी के जीवन को बचाने में मदद करेगा। आपका यह नेक कार्य समाज के लिए प्रेरणादायक है।',
+      date: '26-02-2025',
+      location: 'श्री क्षत्रीय घाँची छात्रावास समाज भवन, मंडिया रोड, पाली',
+      photo: '/ketandevra.github.io/images/event6.png'
+    },
   ];
 
   return (
