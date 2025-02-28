@@ -14,7 +14,7 @@ export default function EventDetail({
   params,
 }: {
   params: { id: string }
-} & { searchParams: { [key: string]: string | string[] | undefined } }) {
+}) {
   const event = events.find(e => e.id === Number(params.id));
 
   if (!event) {
