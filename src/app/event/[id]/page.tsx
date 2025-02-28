@@ -10,7 +10,11 @@ export async function generateStaticParams() {
 
 export const dynamic = 'force-static';
 
-export default function EventDetail({ params }: { params: { id: string } }) {
+export default function EventDetail({
+  params,
+}: {
+  params: { id: string }
+} & { searchParams: { [key: string]: string | string[] | undefined } }) {
   const event = events.find(e => e.id === Number(params.id));
 
   if (!event) {
