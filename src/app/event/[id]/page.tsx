@@ -2,11 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { events } from '../data';
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return events.map((event) => ({
     id: event.id.toString(),
   }));
 }
+
+export const dynamic = 'force-static';
 
 export default function EventDetail({ params }: { params: { id: string } }) {
   const event = events.find(e => e.id === Number(params.id));
