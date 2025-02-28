@@ -10,7 +10,7 @@ export async function generateStaticParams() {
 
 export const dynamic = 'force-static';
 
-export default function EventDetail({
+export default async function EventDetail({
   params,
 }: {
   params: { id: string }
