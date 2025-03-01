@@ -2,9 +2,64 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 export default function Expenses() {
   const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  const exportToPDF = () => {
+    const doc = new jsPDF();
+    
+    // Use default font
+    doc.setFont("times", "normal");
+    
+    // Add organization name at top
+    doc.setFontSize(20);
+    doc.text("Shri Kshatriya Ghanchi Yuva Mahasabha, Pali", doc.internal.pageSize.width/2, 20, { align: "center" });
+    
+    // Add horizontal line
+    doc.setLineWidth(0.5);
+    doc.line(20, 25, doc.internal.pageSize.width - 20, 25);
+    
+    // Title
+    doc.setFontSize(16);
+    doc.text("Expenses Management", doc.internal.pageSize.width/2, 40, { align: "center" });
+    
+    // Summary box
+    doc.setFontSize(12);
+    doc.text(`Total Expenses: ${expensesData.totalExpenses.toLocaleString()}`, 20, 60);
+
+    // Table
+    autoTable(doc, {
+      startY: 70,
+      head: [['Sr. No.', 'Date', 'Particulars', 'Amount']],
+      body: expensesData.expenses.map(expense => [
+        expense.serialNumber,
+        expense.date,
+        expense.description,
+        expense.amount
+      ]),
+      styles: {
+        fontSize: 10
+      },
+      headStyles: {
+        fillColor: [220, 38, 38], // Red color for expenses
+        textColor: 255,
+        fontSize: 10,
+        fontStyle: 'bold'
+      },
+      alternateRowStyles: {
+        fillColor: [240, 240, 240]
+      }
+    });
+
+    // Add footer
+    doc.setFontSize(10);
+    doc.text("© Shri Kshatriya Ghanchi Yuva Mahasabha, Pali", doc.internal.pageSize.width/2, doc.internal.pageSize.height - 10, { align: "center" });
+
+    doc.save('expenses-report.pdf');
+  };
 
   useEffect(() => {
     // Check if we've animated before in this session
@@ -21,30 +76,30 @@ export default function Expenses() {
       {
         serialNumber: "1",
         date: "24-07-2024",
-        name: "स्मार्ट कार्ड कैंप",
-        description: "स्मार्ट कार्ड कैंप पर खर्च",
-        amount: "₹170"
+        name: "स्मार्ट कार्ड कैंप पर खर्च",
+        description: "Expenses on smart card camp",
+        amount: "170"
       },
       {
         serialNumber: "2",
         date: "06-08-2024",
         name: "दूध पैकेट्स",
-        description: "दूध पैकेट्स",
-        amount: "₹4,000"
+        description: "Milk packets",
+        amount: "4,000"
       },
       {
         serialNumber: "3",
         date: "10-08-2024",
-        name: "HSRP कैंप",
-        description: "HSRP कैंप पर खर्च",
-        amount: "₹1,000"
+        name: "HSRP कैंप पर खर्च",
+        description: "Expenses on HSRP camp",
+        amount: "1,000"
       },
       {
         serialNumber: "4",
         date: "25-08-2024",
-        name: "पोहा",
-        description: "रामदेवरा के लिए पोहा",
-        amount: "₹8,100"
+        name: "रामदेवरा यात्रियों के लिए पोहा",
+        description: "Poha for Ramdevra travelers",
+        amount: "8,100"
       }
     ]
   };
@@ -74,9 +129,19 @@ export default function Expenses() {
             </svg>
             वापस जाएं
           </Link>
-          <h1 className="text-3xl font-bold text-red-700 dark:text-red-400 text-center">खर्च प्रबंधन</h1>
+          <div className="flex justify-between items-center">
+            <h1 className="text-3xl font-bold text-red-700 dark:text-red-400 text-center flex-grow">खर्च प्रबंधन</h1>
+            <button
+              onClick={exportToPDF}
+              className="inline-flex items-center px-4 py-2 bg-red-600 dark:bg-red-700 text-white rounded-lg border border-red-600 dark:border-red-700 hover:bg-red-700 dark:hover:bg-red-800 transition-colors"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Print PDF
+            </button>
+          </div>
         </div>
-        <h1 className="sm:hidden text-3xl font-bold text-red-700 dark:text-red-400 text-center">खर्च प्रबंधन</h1>
       </div>
 
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-6">
@@ -131,7 +196,7 @@ export default function Expenses() {
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{expense.date}</td>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{expense.name}</td>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{expense.description}</td>
-                    <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{expense.amount}</td>
+                    <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">₹{expense.amount}</td>
                   </tr>
                 ))}
               </tbody>
