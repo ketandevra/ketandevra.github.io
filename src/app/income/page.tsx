@@ -25,7 +25,7 @@ export default function Income() {
         {
             "serialNumber": "1",
             "date": "11-08-2024",
-            "name": "रमेश परिहार (साबु)",
+            "name": "रमेश परिहार (साबु) से प्राप्त",
             "description": "Received from Ramesh Parihar (Saabu)",
             "amount": "50,000"
         },
@@ -46,14 +46,14 @@ export default function Income() {
         {
             "serialNumber": "4",
             "date": "09-10-2024",
-            "name": "रमेश परिहार (साबु)",
+            "name": "रमेश परिहार (साबु) से प्राप्त",
             "description": "Received from Ramesh Parihar (Saabu)",
             "amount": "49,000"
         },
         {
             "serialNumber": "5",
             "date": "14-10-2024",
-            "name": "रमेश परिहार (साबु)",
+            "name": "रमेश परिहार (साबु) से प्राप्त",
             "description": "Received from Ramesh Parihar (Saabu)",
             "amount": "49,000"
         },
