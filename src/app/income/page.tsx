@@ -16,9 +16,9 @@ export default function Income() {
   }, []);
 
   const incomeData = {
-    totalAmount: 153745,
+    totalAmount: 155151,
     receivedAmount: 148000,
-    interestEarned: 5745,
+    interestEarned: 7151,
     incomes: [
         {
             "serialNumber": "1",
@@ -82,6 +82,13 @@ export default function Income() {
             "name": "ब्याज अर्जित",
             "description": "Interest Earned",
             "amount": "₹1,393"
+        },
+        {
+          "serialNumber": "10",
+          "date": "01-03-2025",
+          "name": "ब्याज अर्जित",
+          "description": "Interest Earned",
+          "amount": "₹1,406"
         }
     ]
   };

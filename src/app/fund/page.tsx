@@ -37,7 +37,7 @@ export default function Fund() {
                     "153,745"
                   ) : (
                     <CountUp 
-                      end={153745} 
+                      end={155151} 
                       duration={2.5} 
                       separator="," 
                       onEnd={() => setShouldAnimate(false)}
@@ -88,7 +88,7 @@ export default function Fund() {
                     "140,645"
                   ) : (
                     <CountUp 
-                      end={140645} 
+                      end={142051} 
                       duration={2.5} 
                       separator="," 
                       onEnd={() => setShouldAnimate(false)}
