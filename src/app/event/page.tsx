@@ -24,7 +24,7 @@ export default function Event() {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {[...events].reverse().map((event) => (
           <Link 
-            href={"#"} 
+            href={`/event/${event.id}`}
             key={event.id}
             className="block bg-white dark:bg-gray-800 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300 overflow-hidden"
           >

@@ -1,6 +1,5 @@
 {
-  "/income/page": "app/income/page.js",
-  "/fund/page": "app/fund/page.js",
-  "/blood-donor/page": "app/blood-donor/page.js",
-  "/expenses/page": "app/expenses/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/event/[id]/page": "app/event/[id]/page.js"
 }
