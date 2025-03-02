@@ -1,7 +1,8 @@
-'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import { events } from './data';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { events } from "./data";
+import { useRouter } from "next/navigation";
 
 interface Event {
   id: number;
@@ -13,33 +14,30 @@ interface Event {
 }
 
 export default function Event() {
+  const router = useRouter();
+
+  const handleEventClick = (event: Event) => {
+    router.push(`/event/detail?id=${event.id}`);
+  };
 
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">कार्यक्रम</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          कार्यक्रम
+        </h1>
         <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
       </div>
-      
+
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {[...events].reverse().map((event) => (
-          <Link 
-            href={{
-              pathname: '/event/detail',
-              query: {
-                id: event.id,
-                name: event.NameHindi,
-                description: event.DescriptionHindi,
-                date: event.date,
-                location: event.location,
-                photo: event.photo
-              }
-            }}
+          <div
+            onClick={() => handleEventClick(event)}
             key={event.id}
-            className="block bg-white dark:bg-gray-800 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300 overflow-hidden"
+            className="block bg-white dark:bg-gray-800 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300 overflow-hidden cursor-pointer"
           >
             <div className="aspect-[3/3] w-full relative">
-              <Image 
+              <Image
                 src={event.photo}
                 alt={event.NameHindi}
                 fill
@@ -58,9 +56,9 @@ export default function Event() {
                 <p>📍 {event.location}</p>
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </main>
   );
-} 
+}

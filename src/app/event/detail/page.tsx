@@ -1,26 +1,12 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
-export default function EventDetail({ 
-  searchParams 
-}: { 
-  searchParams: { 
-    id: string,
-    name: string,
-    description: string,
-    date: string,
-    location: string,
-    photo: string
-  }
-}) {
-  const event = {
-    id: Number(searchParams.id),
-    NameHindi: searchParams.name,
-    DescriptionHindi: searchParams.description,
-    date: searchParams.date,
-    location: searchParams.location,
-    photo: searchParams.photo
-  };
+"use client";
+import { events } from "../data";
+import Image from "next/image";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+export default function EventDetail() {
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
+  const event = events.find((e) => e.id === Number(id));
 
   if (!event) {
     return (
@@ -63,7 +49,7 @@ export default function EventDetail({
         {/* Event Image */}
         <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh]">
           <Image
-            src={event.photo ? event.photo : "/images/default-event-image.jpg"}
+            src={event.photo}
             alt={event.NameHindi}
             fill
             className="object-contain"
