@@ -2,13 +2,20 @@ import { events } from "../data";
 import Image from 'next/image';
 import Link from 'next/link';
 
+type Props = {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
 export async function generateStaticParams() {
   return events.map((event) => ({
     id: event.id.toString(),
   }));
 }
 
-export default async function EventDetail({ params }: { params: { id: string } }) {
+export default async function EventDetail({ params }: Props) {
   const event = events.find((e) => e.id === Number(params?.id));
 
   if (!event) {
