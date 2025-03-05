@@ -100,6 +100,27 @@ export default function Expenses() {
         name: "रामदेवरा यात्रियों के लिए पोहा",
         description: "Poha for Ramdevra travelers",
         amount: "8,100"
+      },
+      {
+        serialNumber: "5",
+        date: "22-02-2025",
+        name: "मदन जी के लिए आतिशबाजी",
+        description: "Fireworks for Madan Ji",
+        amount: "3,200"
+      },
+      {
+        serialNumber: "6",
+        date: "03-03-2025",
+        name: "पेपर बोट जूस - भूतेश्वर मंदिर, सूरजपोल",
+        description: "Paper Boat Juice - Bhuteshwar Mandir, Surajpole",
+        amount: "960"
+      },
+      {
+        serialNumber: "7",
+        date: "04-03-2025",
+        name: "माला एवं साफा मदन जी के लिए",
+        description: "Mala and Safa for Madan Ji",
+        amount: "1,400"
       }
     ]
   };
