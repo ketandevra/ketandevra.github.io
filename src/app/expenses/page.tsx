@@ -173,7 +173,7 @@ export default function Expenses() {
                 <h3 className="text-lg font-medium text-red-900 dark:text-red-300">खर्च राशि</h3>
                 <p className="text-3xl font-bold text-red-800 dark:text-red-400">
                   ₹{!shouldAnimate ? (
-                    "13,100"
+                    "18,660"
                   ) : (
                     <CountUp 
                       end={expensesData.totalExpenses} 
