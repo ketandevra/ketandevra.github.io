@@ -71,7 +71,7 @@ export default function Expenses() {
   }, []);
   
   const expensesData = {
-    totalExpenses: 13100,
+    totalExpenses: 18660,
     expenses: [
       {
         serialNumber: "1",
