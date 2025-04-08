@@ -110,7 +110,7 @@ export default function Expenses() {
       },
       {
         serialNumber: "6",
-        date: "03-03-2025",
+        date: "02-03-2025",
         name: "पेपर बोट जूस - भूतेश्वर मंदिर, सूरजपोल",
         description: "Paper Boat Juice - Bhuteshwar Mandir, Surajpole",
         amount: "960"
