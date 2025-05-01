@@ -133,5 +133,14 @@ export const events = [
     date: "03-04-2025",
     location: "बांगड़ हॉस्पिटल, पाली",
     photo: "/ketandevra.github.io/images/event15.png",
+  },
+  {
+    id: 16,
+    NameHindi: "राजेंद्र जी परिहार द्वारा रक्तदान - 30 अप्रैल 2025",
+    DescriptionHindi:
+      "राजेंद्र जी परिहार द्वारा 30 अप्रैल 2025 को किया गया रक्तदान निस्संदेह किसी के जीवन को बचाने में मदद करेगा। आपका यह नेक कार्य समाज के लिए प्रेरणादायक है।",
+    date: "30-04-2025",
+    location: "बांगड़ हॉस्पिटल, पाली",
+    photo: "/ketandevra.github.io/images/event16.png",
   }
 ];
