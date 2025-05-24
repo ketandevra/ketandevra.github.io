@@ -71,7 +71,7 @@ export default function Expenses() {
   }, []);
   
   const expensesData = {
-    totalExpenses: 18660,
+    totalExpenses: 24246,
     expenses: [
       {
         serialNumber: "1",
@@ -90,37 +90,65 @@ export default function Expenses() {
       {
         serialNumber: "3",
         date: "10-08-2024",
+        name: "बिस्किट पैकेट",
+        description: "Expenses on Biscuit Packet",
+        amount: "1,280"
+      },
+      {
+        serialNumber: "4",
+        date: "10-08-2024",
         name: "HSRP कैंप पर खर्च",
         description: "Expenses on HSRP camp",
         amount: "1,000"
       },
       {
-        serialNumber: "4",
+        serialNumber: "5",
         date: "25-08-2024",
         name: "रामदेवरा यात्रियों के लिए पोहा",
         description: "Poha for Ramdevra travelers",
         amount: "8,100"
       },
       {
-        serialNumber: "5",
+        serialNumber: "6",
         date: "22-02-2025",
         name: "मदन जी के लिए आतिशबाजी",
         description: "Fireworks for Madan Ji",
         amount: "3,200"
       },
       {
-        serialNumber: "6",
+        serialNumber: "7",
         date: "02-03-2025",
         name: "पेपर बोट जूस - भूतेश्वर मंदिर, सूरजपोल",
         description: "Paper Boat Juice - Bhuteshwar Mandir, Surajpole",
         amount: "960"
       },
       {
-        serialNumber: "7",
+        serialNumber: "8",
         date: "04-03-2025",
         name: "माला एवं साफा मदन जी के लिए",
         description: "Mala and Safa for Madan Ji",
         amount: "1,400"
+      },
+      {
+        serialNumber: "9",
+        date: "10-03-2025",
+        name: "पेपर बोट जूस - घाँचीयो का बड़ा बास",
+        description: "Paper Boat Juice - Ghachiyo Ka Bada Baas",
+        amount: "2050"
+      },
+      {
+        serialNumber: "10",
+        date: "13-03-2025",
+        name: "पेपर बोट जूस - भलावतो का बास",
+        description: "Paper Boat Juice - Bhalaavato Ka Baas",
+        amount: "1128"
+      },
+      {
+        serialNumber: "11",
+        date: "14-03-2025",
+        name: "पेपर बोट जूस - रजत नगर, रामदेव रोड",
+        description: "Paper Boat Juice - Rajat Nagar, Ramdev Road",
+        amount: "1,000"
       }
     ]
   };
@@ -173,7 +201,7 @@ export default function Expenses() {
                 <h3 className="text-lg font-medium text-red-900 dark:text-red-300">खर्च राशि</h3>
                 <p className="text-3xl font-bold text-red-800 dark:text-red-400">
                   ₹{!shouldAnimate ? (
-                    "18,660"
+                    "24,246"
                   ) : (
                     <CountUp 
                       end={expensesData.totalExpenses} 
