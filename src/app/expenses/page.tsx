@@ -134,14 +134,14 @@ export default function Expenses() {
         date: "10-03-2025",
         name: "पेपर बोट जूस - घाँचीयो का बड़ा बास",
         description: "Paper Boat Juice - Ghachiyo Ka Bada Baas",
-        amount: "2050"
+        amount: "2,050"
       },
       {
         serialNumber: "10",
         date: "13-03-2025",
         name: "पेपर बोट जूस - भलावतो का बास",
         description: "Paper Boat Juice - Bhalaavato Ka Baas",
-        amount: "1128"
+        amount: "1,128"
       },
       {
         serialNumber: "11",
