@@ -18,9 +18,9 @@ export default function Income() {
   }, []);
 
   const incomeData = {
-    totalAmount: 159175,
+    totalAmount: 160524,
     receivedAmount: 148000,
-    interestEarned: 11175,
+    interestEarned: 12524,
     incomes: [
         {
             "serialNumber": "1",
@@ -112,6 +112,13 @@ export default function Income() {
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
           "amount": "1,336"
+        },
+        {
+          "serialNumber": "14",
+          "date": "01-07-2025",
+          "name": "ब्याज अर्जित",
+          "description": "Interest Earned",
+          "amount": "1,349"
         }
     ]
   };
@@ -246,7 +253,7 @@ export default function Income() {
                 <h3 className="text-lg font-medium text-blue-900 dark:text-blue-300">कुल ब्याज अर्जित</h3>
                 <p className="text-3xl font-bold text-blue-800 dark:text-blue-400">
                   ₹{!shouldAnimate ? (
-                    "11,175"
+                    "12,524"
                   ) : (
                     <CountUp 
                       end={incomeData.interestEarned} 
@@ -261,7 +268,7 @@ export default function Income() {
                 <h3 className="text-lg font-medium text-purple-900 dark:text-purple-300">कुल राशि</h3>
                 <p className="text-3xl font-bold text-purple-800 dark:text-purple-400">
                   ₹{!shouldAnimate ? (
-                    "159,175"
+                    "160,524"
                   ) : (
                     <CountUp 
                       end={incomeData.totalAmount} 
