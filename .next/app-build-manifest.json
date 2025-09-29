@@ -11,25 +11,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
-    ],
-    "/event/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/event/page.js"
-    ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/event/detail/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/event/detail/page.js"
+      "static/chunks/app/_not-found/page.js"
+    ],
+    "/gympl-2025/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/gympl-2025/page.js"
     ]
   }
 }

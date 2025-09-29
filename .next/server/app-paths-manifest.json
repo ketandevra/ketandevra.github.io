@@ -1,7 +1,5 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/event/page": "app/event/page.js",
-  "/event/detail/page": "app/event/detail/page.js",
-  "/page": "app/page.js"
+  "/gympl-2025/page": "app/gympl-2025/page.js"
 }
