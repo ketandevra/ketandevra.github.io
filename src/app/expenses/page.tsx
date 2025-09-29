@@ -149,6 +149,13 @@ export default function Expenses() {
         name: "पेपर बोट जूस - रजत नगर, रामदेव रोड",
         description: "Paper Boat Juice - Rajat Nagar, Ramdev Road",
         amount: "1,000"
+      },
+      {
+        serialNumber: "12",
+        date: "09-06-2025",
+        name: "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
+        description: "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
+        amount: "73,030"
       }
     ]
   };
@@ -201,7 +208,7 @@ export default function Expenses() {
                 <h3 className="text-lg font-medium text-red-900 dark:text-red-300">खर्च राशि</h3>
                 <p className="text-3xl font-bold text-red-800 dark:text-red-400">
                   ₹{!shouldAnimate ? (
-                    "24,246"
+                    "97,276"
                   ) : (
                     <CountUp 
                       end={expensesData.totalExpenses} 
