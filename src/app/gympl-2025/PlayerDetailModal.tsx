@@ -30,8 +30,25 @@ export default function PlayerDetailModal({ player, onClose }: PlayerDetailModal
           <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden mb-8">
             <div className="md:flex">
               {/* Player Image */}
-              <div className="md:w-1/3 bg-gray-200 dark:bg-gray-600 p-8 flex items-center justify-center">
-                <div className="w-32 h-32 bg-gray-300 dark:bg-gray-500 rounded-full flex items-center justify-center">
+              <div className="md:w-1/3 bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
+                {player.image ? (
+                  <img
+                    src={player.image}
+                    alt={player.name}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      // Fallback to initials if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
+                    }}
+                  />
+                ) : null}
+                <div 
+                  className="w-full h-full bg-gray-300 dark:bg-gray-500 rounded-full flex items-center justify-center"
+                  style={{ display: player.image ? 'none' : 'flex' }}
+                >
                   <span className="text-4xl font-bold text-gray-600 dark:text-gray-300">
                     {player.name.split(' ').map(n => n[0]).join('')}
                   </span>

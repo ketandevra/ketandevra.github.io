@@ -50,8 +50,25 @@ export default function CricketPlayersList() {
             className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer overflow-hidden"
           >
               {/* Player Image */}
-              <div className="relative h-48 bg-gray-200 dark:bg-gray-700">
-                <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative h-80 bg-gray-200 dark:bg-gray-700">
+                {player.image ? (
+                  <img
+                    src={player.image}
+                    alt={player.name}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      // Fallback to initials if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
+                    }}
+                  />
+                ) : null}
+                <div 
+                  className="absolute inset-0 flex items-center justify-center"
+                  style={{ display: player.image ? 'none' : 'flex' }}
+                >
                   <div className="w-24 h-24 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center">
                     <span className="text-2xl font-bold text-gray-600 dark:text-gray-300">
                       {player.name.split(' ').map(n => n[0]).join('')}
