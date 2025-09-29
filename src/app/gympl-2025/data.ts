@@ -1,57 +1,61 @@
-import { CricketPlayer } from '@/types/cricket';
+import { CricketPlayer } from "@/types/cricket";
 
 export const cricketPlayers: CricketPlayer[] = [
   {
-    id: '1',
-    name: 'Jatin Rathore',
-    image: '/ketandevra.github.io/images/players/gympl-001.png',
-    battingStyle: 'Batsman / Batter',
-    bowlingStyle: 'Right-arm medium',
-    role: 'Batsman',
+    id: "002",
+    name: "Jatin Rathore",
+    image: "/ketandevra.github.io/images/players/gympl-002.png",
+    battingStyle: "Batsman / Batter",
+    bowlingStyle: "Right-arm medium",
+    role: "Batsman",
     stats: {
       matches: 254,
       runs: 12169,
       average: 53.17,
-      strikeRate: 93.24
+      strikeRate: 93.24,
     },
-    team: 'India',
+    team: "002",
     age: 17,
-    nationality: 'Indian'
+    nationality: "Indian",
   },
-  // {
-  //   id: '2',
-  //   name: 'Rohit Sharma',
-  //   image: '/images/players/rohit-sharma.jpg',
-  //   battingStyle: 'Right-handed',
-  //   bowlingStyle: 'Right-arm off-break',
-  //   role: 'Batsman',
-  //   stats: {
-  //     matches: 243,
-  //     runs: 9205,
-  //     average: 49.27,
-  //     strikeRate: 88.92
-  //   },
-  //   team: 'India',
-  //   age: 36,
-  //   nationality: 'Indian'
-  // },
-  // {
-  //   id: '3',
-  //   name: 'MS Dhoni',
-  //   image: '/images/players/ms-dhoni.jpg',
-  //   battingStyle: 'Right-handed',
-  //   bowlingStyle: 'Right-arm medium',
-  //   role: 'Wicket-keeper',
-  //   stats: {
-  //     matches: 350,
-  //     runs: 10773,
-  //     average: 50.57,
-  //     strikeRate: 87.56
-  //   },
-  //   team: 'India',
-  //   age: 42,
-  //   nationality: 'Indian'
-  // },
+  {
+    id: "013",
+    name: "Mahesh Bhati",
+    image: "/ketandevra.github.io/images/players/gympl-013.png",
+    battingStyle: "Left-handed",
+    bowlingStyle: "Left-arm fast",
+    role: "All-rounder",
+    stats: {
+      matches: 4,
+      runs: 16,
+      average: 5.33,
+      strikeRate: 72.73,
+      wickets: 5,
+      economy: 7.71,
+    },
+    team: "013",
+    age: 32,
+    nationality: "Indian",
+  },
+  {
+    id: "019",
+    name: "Ganpat Lal Parmar",
+    image: "/ketandevra.github.io/images/players/gympl-019.png",
+    battingStyle: "Right-handed",
+    bowlingStyle: "Right-arm off-break",
+    role: "All-rounder",
+    stats: {
+      matches: 19,
+      runs: 81,
+      average: 16.20,
+      strikeRate: 102.53,
+      wickets: 5,
+      economy: 7.71,
+    },
+    team: "019",
+    age: 32,
+    nationality: "Indian",
+  }
   // {
   //   id: '4',
   //   name: 'Jasprit Bumrah',
