@@ -114,7 +114,7 @@ export default function CricketPlayersList() {
       {filteredPlayers.length === 0 && (
         <div className="text-center py-12">
           <div className="text-gray-500 dark:text-gray-400 text-lg">
-            No players found matching "{searchTerm}"
+            No players found matching &quot;{searchTerm}&quot;
           </div>
           <button
             onClick={() => setSearchTerm('')}

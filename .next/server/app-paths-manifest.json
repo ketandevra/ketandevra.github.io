@@ -1,5 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/gympl-2025/page": "app/gympl-2025/page.js"
+  "/gympl-2025/page": "app/gympl-2025/page.js",
+  "/page": "app/page.js"
 }
