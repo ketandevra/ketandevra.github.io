@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/about</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Committee Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/committee</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Committee List Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/committee-list</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blood Donor Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/blood-donor</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Matrimonial Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/matrimonial</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Event Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/event</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Event Detail Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/event/detail</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Fund Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/fund</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Income Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/income</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Expenses Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/expenses</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Accounts Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/accounts</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/contact</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- GYMPL 2025 Page -->
+  <url>
+    <loc>https://ketandevra.github.io/ketandevra.github.io/gympl-2025</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>
+

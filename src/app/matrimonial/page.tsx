@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Matrimonial Services | Ghanchi Samaj Pali Rajasthan",
+  description: "Find matrimonial matches within Ghanchi Samaj Pali community. Marriage and matchmaking services for Ghanchi families in Pali, Rajasthan. घांची समाज पाली मैट्रिमोनियल सेवाएं।",
+  keywords: ["ghanchi matrimonial", "ghanchi samaj matrimonial", "ghanchi marriage pali", "ghanchi matchmaking", "ghanchi shaadi", "ghanchi vivah"],
+  openGraph: {
+    title: "Matrimonial Services | Ghanchi Samaj Pali Rajasthan",
+    description: "Find matrimonial matches within Ghanchi Samaj Pali community. Marriage services for Ghanchi families.",
+  },
+};
+
 export default function Matrimonial() {
   return (
     <div className="container mx-auto px-4 py-16">

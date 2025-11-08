@@ -1,20 +1,68 @@
 import Image from "next/image";
 import Link from "next/link";
 import Committee from "./committee/page";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home | Ghanchi Samaj Pali Rajasthan",
+  description: "Welcome to Ghanchi Samaj Pali Rajasthan. Access community services including matrimonial, blood donors, events, funds, and committee information. घांची समाज पाली राजस्थान में आपका स्वागत है।",
+  openGraph: {
+    title: "Home | Ghanchi Samaj Pali Rajasthan",
+    description: "Welcome to Ghanchi Samaj Pali Rajasthan. Access community services including matrimonial, blood donors, events, funds, and committee information.",
+    images: ["/ketandevra.github.io/images/banner.png"],
+  },
+};
 
 export default function Home() {
+  // Structured Data (JSON-LD) for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Ghanchi Samaj Pali Rajasthan",
+    alternateName: "घांची समाज पाली राजस्थान",
+    url: "https://ketandevra.github.io/ketandevra.github.io/",
+    logo: "https://ketandevra.github.io/ketandevra.github.io/logo.svg",
+    description: "Ghanchi Samaj is a community organization in Pali, Rajasthan, India providing services to community members including events, matrimonial, blood donation, and funds.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Pali",
+      addressRegion: "Rajasthan",
+      addressCountry: "IN",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Pali, Rajasthan, India",
+    },
+    sameAs: [],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Community Service",
+      areaServed: "IN",
+      availableLanguage: ["Hindi", "English"],
+    },
+  };
+
+  const structuredDataScript = JSON.stringify(structuredData);
+
   return (
-    <main className="flex flex-col gap-8">
-      {/* Banner Image */}
-      <div className="w-full aspect-[16/7] relative">
-        <Image
-          src="/ketandevra.github.io/images/banner.png"
-          alt="Banner Image"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+    <>
+      {/* Add Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: structuredDataScript }}
+      />
+      
+      <main className="flex flex-col gap-8">
+        {/* Banner Image */}
+        <div className="w-full aspect-[16/7] relative">
+          <Image
+            src="/ketandevra.github.io/images/banner.png"
+            alt="Ghanchi Samaj Pali Rajasthan Banner - घांची समाज पाली राजस्थान"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
 
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-black mb-4">हमारी सेवाएँ</h1>
@@ -208,5 +256,6 @@ export default function Home() {
 
       <Committee />
     </main>
+    </>
   );
 }

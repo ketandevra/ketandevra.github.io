@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Ghanchi Samaj Pali Rajasthan",
+  description: "Learn about Ghanchi Samaj Pali Rajasthan - Our vision, values, and commitment to serving the Ghanchi community in Pali, Rajasthan, India. घांची समाज पाली राजस्थान के बारे में जानें।",
+  keywords: ["ghanchi samaj about", "ghanchi samaj pali about", "about ghanchi community pali", "ghanchi samaj rajasthan"],
+  openGraph: {
+    title: "About Us | Ghanchi Samaj Pali Rajasthan",
+    description: "Learn about Ghanchi Samaj Pali Rajasthan - Our vision, values, and commitment to serving the community.",
+  },
+};
+
 export default function AboutUs() {
   return (
     <main className="flex flex-col gap-8 items-center p-8">

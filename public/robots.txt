@@ -1,0 +1,27 @@
+# robots.txt for Ghanchi Samaj Pali Rajasthan
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ketandevra.github.io/ketandevra.github.io/sitemap.xml
+
+# Disallow crawling of admin or private directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow crawling of important pages
+Allow: /about
+Allow: /committee
+Allow: /committee-list
+Allow: /blood-donor
+Allow: /matrimonial
+Allow: /event
+Allow: /fund
+Allow: /income
+Allow: /expenses
+Allow: /accounts
+Allow: /contact
+Allow: /gympl-2025
+
