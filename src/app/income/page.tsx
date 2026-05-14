@@ -18,9 +18,9 @@ export default function Income() {
   }, []);
 
   const incomeData = {
-    totalAmount: 162983,
+    totalAmount: 166335,
     receivedAmount: 148000,
-    interestEarned: 14983,
+    interestEarned: 18335,
     incomes: [
         {
             "serialNumber": "1",
@@ -154,6 +154,41 @@ export default function Income() {
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
           "amount": "651"
+        },
+        {
+          "serialNumber": "20",
+          "date": "01-01-2026",
+          "name": "ब्याज अर्जित",
+          "description": "Interest Earned",
+          "amount": "657"
+        },
+        {
+          "serialNumber": "21",
+          "date": "01-02-2026",
+          "name": "ब्याज अर्जित",
+          "description": "Interest Earned",
+          "amount": "664"
+        },
+        {
+          "serialNumber": "22",
+          "date": "01-03-2026",
+          "name": "ब्याज अर्जित",
+          "description": "Interest Earned",
+            "amount": "670"
+        },
+        {
+          "serialNumber": "23",
+          "date": "01-04-2026",
+          "name": "ब्याज अर्जित",
+          "description": "Interest Earned",
+          "amount": "677"
+        },
+        {
+          "serialNumber": "24",
+          "date": "01-05-2026",
+          "name": "ब्याज अर्जित",
+          "description": "Interest Earned",
+          "amount": "684"
         }
     ]
   };
@@ -288,7 +323,7 @@ export default function Income() {
                 <h3 className="text-lg font-medium text-blue-900 dark:text-blue-300">कुल ब्याज अर्जित</h3>
                 <p className="text-3xl font-bold text-blue-800 dark:text-blue-400">
                   ₹{!shouldAnimate ? (
-                    "14,332"
+                    "18,335"
                   ) : (
                     <CountUp 
                       end={incomeData.interestEarned} 
@@ -303,7 +338,7 @@ export default function Income() {
                 <h3 className="text-lg font-medium text-purple-900 dark:text-purple-300">कुल राशि</h3>
                 <p className="text-3xl font-bold text-purple-800 dark:text-purple-400">
                   ₹{!shouldAnimate ? (
-                    "162,983"
+                    "166,335"
                   ) : (
                     <CountUp 
                       end={incomeData.totalAmount} 
