@@ -23,12 +23,12 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center gap-6">
-          <Link
+          {/* <Link
             href="/gympl-2025"
             className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
           >
             GYMPL-2025
-          </Link>
+          </Link> */}
           <Link
             href="/fund"
             className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
