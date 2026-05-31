@@ -86,7 +86,7 @@ const Footer = () => {
       {/* Copyright Section */}
       <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
         <p className="text-center text-sm text-gray-600 dark:text-gray-300">
-          © 2025 श्री क्षत्रीय घाँची युवा महासभा समिति, पाली. All Rights Reserved.
+          © 2026 श्री क्षत्रीय घाँची युवा महासभा समिति, पाली. All Rights Reserved.
         </p>
       </div>
     </footer>
