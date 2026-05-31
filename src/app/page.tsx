@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Home | Ghanchi Samaj Pali Rajasthan",
     description: "Welcome to Ghanchi Samaj Pali Rajasthan. Access community services including matrimonial, blood donors, events, funds, and committee information.",
-    images: ["/ketandevra.github.io/images/banner.png"],
+    images: ["/images/banner.png"],
   },
 };
 
@@ -20,8 +20,8 @@ export default function Home() {
     "@type": "Organization",
     name: "Ghanchi Samaj Pali Rajasthan",
     alternateName: "घांची समाज पाली राजस्थान",
-    url: "https://ketandevra.github.io/ketandevra.github.io/",
-    logo: "https://ketandevra.github.io/ketandevra.github.io/logo.svg",
+    url: "https://ketandevra.github.io/",
+    logo: "https://ketandevra.github.io/logo.svg",
     description: "Ghanchi Samaj is a community organization in Pali, Rajasthan, India providing services to community members including events, matrimonial, blood donation, and funds.",
     address: {
       "@type": "PostalAddress",
@@ -56,7 +56,7 @@ export default function Home() {
         {/* Banner Image */}
         <div className="w-full aspect-[16/7] relative">
           <Image
-            src="/ketandevra.github.io/images/banner.png"
+            src="/images/banner.png"
             alt="Ghanchi Samaj Pali Rajasthan Banner - घांची समाज पाली राजस्थान"
             fill
             className="object-cover"

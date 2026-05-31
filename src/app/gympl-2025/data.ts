@@ -4,7 +4,7 @@ export const cricketPlayers: CricketPlayer[] = [
   {
     id: "002",
     name: "Jatin Rathore",
-    image: "/ketandevra.github.io/images/players/gympl-002.png",
+    image: "/images/players/gympl-002.png",
     battingStyle: "Batsman / Batter",
     bowlingStyle: "Right-arm medium",
     role: "Batsman",
@@ -21,7 +21,7 @@ export const cricketPlayers: CricketPlayer[] = [
   {
     id: "013",
     name: "Mahesh Bhati",
-    image: "/ketandevra.github.io/images/players/gympl-013.png",
+    image: "/images/players/gympl-013.png",
     battingStyle: "Left-handed",
     bowlingStyle: "Left-arm fast",
     role: "All-rounder",
@@ -40,7 +40,7 @@ export const cricketPlayers: CricketPlayer[] = [
   {
     id: "019",
     name: "Ganpat Lal Parmar",
-    image: "/ketandevra.github.io/images/players/gympl-019.png",
+    image: "/images/players/gympl-019.png",
     battingStyle: "Right-handed",
     bowlingStyle: "Right-arm off-break",
     role: "All-rounder",

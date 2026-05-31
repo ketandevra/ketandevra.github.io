@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "hi_IN",
     alternateLocale: ["en_IN"],
-    url: "https://ketandevra.github.io/ketandevra.github.io/",
+    url: "https://ketandevra.github.io/",
     title: "Ghanchi Samaj Pali Rajasthan | घांची समाज पाली राजस्थान",
     description: "Official website of Ghanchi Samaj Pali Rajasthan. Community services, events, matrimonial, blood donors, and more. घांची समाज पाली राजस्थान की आधिकारिक वेबसाइट।",
     siteName: "Ghanchi Samaj Pali Rajasthan",
     images: [
       {
-        url: "/ketandevra.github.io/images/banner.png",
+        url: "/images/banner.png",
         width: 1200,
         height: 630,
         alt: "Ghanchi Samaj Pali Rajasthan",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ghanchi Samaj Pali Rajasthan",
     description: "Official website of Ghanchi Samaj Pali Rajasthan. Community services, events, matrimonial, blood donors.",
-    images: ["/ketandevra.github.io/images/banner.png"],
+    images: ["/images/banner.png"],
   },
   robots: {
     index: true,

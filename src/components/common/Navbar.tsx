@@ -9,7 +9,7 @@ const Navbar = () => {
       <nav className="hidden sm:flex items-center justify-between px-6 py-2 bg-white dark:bg-gray-800 shadow-sm">
         <div className="flex items-center gap-3">
           <Image
-            src="/ketandevra.github.io/logo.svg"
+            src="/logo.svg"
             alt="श्री क्षत्रीय घाँची युवा महासभा समिति Logo"
             width={32}
             height={32}

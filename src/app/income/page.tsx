@@ -189,6 +189,13 @@ export default function Income() {
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
           "amount": "684"
+        },
+        {
+          "serialNumber": "25",
+          "date": "01-06-2026",
+          "name": "ब्याज अर्जित",
+          "description": "Interest Earned",
+          "amount": "691"
         }
     ]
   };
