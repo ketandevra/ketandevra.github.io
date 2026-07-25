@@ -18,9 +18,9 @@ export default function Income() {
   }, []);
 
   const incomeData = {
-    totalAmount: 166335,
+    totalAmount: 164766,
     receivedAmount: 148000,
-    interestEarned: 18335,
+    interestEarned: 16766,
     incomes: [
         {
             "serialNumber": "1",
@@ -160,42 +160,49 @@ export default function Income() {
           "date": "01-01-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "657"
+          "amount": "247"
         },
         {
           "serialNumber": "21",
           "date": "01-02-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "664"
+          "amount": "250"
         },
         {
           "serialNumber": "22",
           "date": "01-03-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-            "amount": "670"
+            "amount": "252"
         },
         {
           "serialNumber": "23",
           "date": "01-04-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "677"
+          "amount": "255"
         },
         {
           "serialNumber": "24",
           "date": "01-05-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "684"
+          "amount": "257"
         },
         {
           "serialNumber": "25",
           "date": "01-06-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "691"
+          "amount": "260"
+        },
+        {
+          "serialNumber": "26",
+          "date": "01-07-2026",
+          "name": "ब्याज अर्जित",
+          "description": "Interest Earned",
+          "amount": "262"
         }
     ]
   };
@@ -330,7 +337,7 @@ export default function Income() {
                 <h3 className="text-lg font-medium text-blue-900 dark:text-blue-300">कुल ब्याज अर्जित</h3>
                 <p className="text-3xl font-bold text-blue-800 dark:text-blue-400">
                   ₹{!shouldAnimate ? (
-                    "18,335"
+                    "16,766"
                   ) : (
                     <CountUp 
                       end={incomeData.interestEarned} 
@@ -345,7 +352,7 @@ export default function Income() {
                 <h3 className="text-lg font-medium text-purple-900 dark:text-purple-300">कुल राशि</h3>
                 <p className="text-3xl font-bold text-purple-800 dark:text-purple-400">
                   ₹{!shouldAnimate ? (
-                    "166,335"
+                    "164,766"
                   ) : (
                     <CountUp 
                       end={incomeData.totalAmount} 

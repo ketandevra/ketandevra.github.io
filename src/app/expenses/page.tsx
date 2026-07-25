@@ -71,7 +71,7 @@ export default function Expenses() {
   }, []);
   
   const expensesData = {
-    totalExpenses: 97276,
+    totalExpenses: 138276,
     expenses: [
       {
         serialNumber: "1",
@@ -156,6 +156,13 @@ export default function Expenses() {
         name: "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
         description: "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
         amount: "73,030"
+      },
+      {
+        serialNumber: "13",
+        date: "25-12-2025",
+        name: "घाँची युवा महासभा प्रीमियर लीग",
+        description: "घाँची युवा महासभा प्रीमियर लीग",
+        amount: "41,000"
       }
     ]
   };
@@ -208,7 +215,7 @@ export default function Expenses() {
                 <h3 className="text-lg font-medium text-red-900 dark:text-red-300">खर्च राशि</h3>
                 <p className="text-3xl font-bold text-red-800 dark:text-red-400">
                   ₹{!shouldAnimate ? (
-                    "97,276"
+                    "1,38,276"
                   ) : (
                     <CountUp 
                       end={expensesData.totalExpenses} 
