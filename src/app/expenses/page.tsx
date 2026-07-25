@@ -110,59 +110,59 @@ export default function Expenses() {
       },
       {
         serialNumber: "6",
+        date: "29-12-2024",
+        name: "घाँची युवा महासभा प्रीमियर लीग",
+        description: "घाँची युवा महासभा प्रीमियर लीग",
+        amount: "41,000"
+      },
+      {
+        serialNumber: "7",
         date: "22-02-2025",
         name: "मदन जी के लिए आतिशबाजी",
         description: "Fireworks for Madan Ji",
         amount: "3,200"
       },
       {
-        serialNumber: "7",
+        serialNumber: "8",
         date: "02-03-2025",
         name: "पेपर बोट जूस - भूतेश्वर मंदिर, सूरजपोल",
         description: "Paper Boat Juice - Bhuteshwar Mandir, Surajpole",
         amount: "960"
       },
       {
-        serialNumber: "8",
+        serialNumber: "9",
         date: "04-03-2025",
         name: "माला एवं साफा मदन जी के लिए",
         description: "Mala and Safa for Madan Ji",
         amount: "1,400"
       },
       {
-        serialNumber: "9",
+        serialNumber: "10",
         date: "10-03-2025",
         name: "पेपर बोट जूस - घाँचीयो का बड़ा बास",
         description: "Paper Boat Juice - Ghachiyo Ka Bada Baas",
         amount: "2,050"
       },
       {
-        serialNumber: "10",
+        serialNumber: "11",
         date: "13-03-2025",
         name: "पेपर बोट जूस - भलावतो का बास",
         description: "Paper Boat Juice - Bhalaavato Ka Baas",
         amount: "1,128"
       },
       {
-        serialNumber: "11",
+        serialNumber: "12",
         date: "14-03-2025",
         name: "पेपर बोट जूस - रजत नगर, रामदेव रोड",
         description: "Paper Boat Juice - Rajat Nagar, Ramdev Road",
         amount: "1,000"
       },
       {
-        serialNumber: "12",
+        serialNumber: "13",
         date: "09-06-2025",
         name: "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
         description: "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
         amount: "73,030"
-      },
-      {
-        serialNumber: "13",
-        date: "25-12-2025",
-        name: "घाँची युवा महासभा प्रीमियर लीग",
-        description: "घाँची युवा महासभा प्रीमियर लीग",
-        amount: "41,000"
       }
     ]
   };
