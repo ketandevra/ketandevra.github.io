@@ -23,7 +23,7 @@ export default function Committee() {
     {
       name: "दीपक देवड़ा",
       position: "कोषाध्यक्ष",
-      photo: "/images/deepak.jpg",
+      photo: "/images/deepak.png",
       mobile: "98290 21138"
     }
   ];
