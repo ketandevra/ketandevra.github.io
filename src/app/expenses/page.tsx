@@ -71,7 +71,7 @@ export default function Expenses() {
   }, []);
   
   const expensesData = {
-    totalExpenses: 138276,
+    totalExpenses: 138446,
     expenses: [
       {
         serialNumber: "1",
@@ -215,7 +215,7 @@ export default function Expenses() {
                 <h3 className="text-lg font-medium text-red-900 dark:text-red-300">खर्च राशि</h3>
                 <p className="text-3xl font-bold text-red-800 dark:text-red-400">
                   ₹{!shouldAnimate ? (
-                    "1,38,276"
+                    "1,38,446"
                   ) : (
                     <CountUp 
                       end={expensesData.totalExpenses} 

@@ -34,10 +34,10 @@ export default function Fund() {
                 <h3 className="font-medium mb-2 text-green-800 dark:text-green-400">कुल राशि</h3>
                 <p className="text-xl font-bold text-green-700 dark:text-green-400">
                   ₹{!shouldAnimate ? (
-                    "1,53,923"
+                    "1,59,957"
                   ) : (
                     <CountUp 
-                      end={153923} 
+                      end={159957} 
                       duration={2.5}
                       separator="," 
                       onEnd={() => setShouldAnimate(false)}
@@ -60,10 +60,10 @@ export default function Fund() {
                 <h3 className="font-medium mb-2 text-red-800 dark:text-red-400">खर्च राशि</h3>
                 <p className="text-xl font-bold text-red-700 dark:text-red-400">
                   ₹{!shouldAnimate ? (
-                    "1,38,276"
+                    "1,38,446"
                   ) : (
                     <CountUp 
-                      end={138276} 
+                      end={138446} 
                       duration={2.5} 
                       separator="," 
                       onEnd={() => setShouldAnimate(false)}
@@ -85,10 +85,10 @@ export default function Fund() {
                 <h3 className="font-medium mb-2 text-blue-800 dark:text-blue-400">शेष राशि</h3>
                 <p className="text-xl font-bold text-blue-700 dark:text-blue-400">
                   ₹{!shouldAnimate ? (
-                    "15,647"
+                    "21,511"
                   ) : (
                     <CountUp 
-                      end={15647} 
+                      end={21511} 
                       duration={2.5}
                       separator="," 
                       onEnd={() => setShouldAnimate(false)}
