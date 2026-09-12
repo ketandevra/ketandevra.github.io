@@ -34,14 +34,14 @@ export default function Income() {
             "date": "01-09-2024",
             "name": "ब्याज अर्जित",
             "description": "Interest Earned",
-            "amount": "258"
+            "amount": "355"
         },
         {
             "serialNumber": "3",
             "date": "01-10-2024",
             "name": "ब्याज अर्जित",
             "description": "Interest Earned",
-            "amount": "371"
+            "amount": "358"
         },
         {
             "serialNumber": "4",
@@ -62,161 +62,161 @@ export default function Income() {
             "date": "01-11-2024",
             "name": "ब्याज अर्जित",
             "description": "Interest Earned",
-            "amount": "979"
+            "amount": "1342"
         },
         {
             "serialNumber": "7",
             "date": "01-12-2024",
             "name": "ब्याज अर्जित",
             "description": "Interest Earned",
-            "amount": "1,365"
+            "amount": "1,355"
         },
         {
             "serialNumber": "8",
             "date": "01-01-2025",
             "name": "ब्याज अर्जित",
             "description": "Interest Earned",
-            "amount": "127"
+            "amount": "959"
         },
         {
             "serialNumber": "9",
             "date": "01-02-2025",
             "name": "ब्याज अर्जित",
             "description": "Interest Earned",
-            "amount": "128"
+            "amount": "968"
         },
         {
           "serialNumber": "10",
           "date": "01-03-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "130"
+          "amount": "946"
         },
         {
           "serialNumber": "11",
           "date": "01-04-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "131"
+          "amount": "889"
         },
         {
           "serialNumber": "12",
           "date": "01-05-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "132"
+          "amount": "898"
         },
         {
           "serialNumber": "13",
           "date": "01-06-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "133"
+          "amount": "907"
         },
         {
           "serialNumber": "14",
           "date": "01-07-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "135"
+          "amount": "185"
         },
         {
           "serialNumber": "15",
           "date": "01-08-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "136"
+          "amount": "187"
         },
         {
           "serialNumber": "16",
           "date": "01-09-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "137"
+          "amount": "189"
         },
         {
           "serialNumber": "17",
           "date": "01-10-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "139"
+          "amount": "191"
         },
         {
           "serialNumber": "18",
           "date": "01-11-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "140"
+          "amount": "193"
         },
         {
           "serialNumber": "19",
           "date": "01-12-2025",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "142"
+          "amount": "195"
         },
         {
           "serialNumber": "20",
           "date": "01-01-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "143"
+          "amount": "197"
         },
         {
           "serialNumber": "21",
           "date": "01-02-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "145"
+          "amount": "199"
         },
         {
           "serialNumber": "22",
           "date": "01-03-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-            "amount": "146"
+            "amount": "201"
         },
         {
           "serialNumber": "23",
           "date": "01-04-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "147"
+          "amount": "203"
         },
         {
           "serialNumber": "24",
           "date": "01-05-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "149"
+          "amount": "205"
         },
         {
           "serialNumber": "25",
           "date": "01-06-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "150"
+          "amount": "207"
         },
         {
           "serialNumber": "26",
           "date": "01-07-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "152"
+          "amount": "209"
         },
         {
           "serialNumber": "27",
           "date": "01-08-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "153"
+          "amount": "211"
         },
         {
           "serialNumber": "28",
           "date": "01-09-2026",
           "name": "ब्याज अर्जित",
           "description": "Interest Earned",
-          "amount": "155"
+          "amount": "213"
         }
     ]
   };
