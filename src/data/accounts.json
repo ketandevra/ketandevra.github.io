@@ -97,6 +97,118 @@
       "description": "Interest Earned",
       "amount": 907,
       "type": "interest"
+    },
+    {
+      "date": "01-07-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 185,
+      "type": "interest"
+    },
+    {
+      "date": "01-08-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 187,
+      "type": "interest"
+    },
+    {
+      "date": "01-09-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 189,
+      "type": "interest"
+    },
+    {
+      "date": "01-10-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 191,
+      "type": "interest"
+    },
+    {
+      "date": "01-11-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 193,
+      "type": "interest"
+    },
+    {
+      "date": "01-12-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 195,
+      "type": "interest"
+    },
+    {
+      "date": "01-01-2026",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 197,
+      "type": "interest"
+    },
+    {
+      "date": "01-02-2026",
+      "name": "ब्याज अर्जित", 
+      "description": "Interest Earned",
+      "amount": 199,
+      "type": "interest"
+    },
+    {
+      "date": "01-03-2026",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 201,
+      "type": "interest"
+    },
+    {
+      "date": "01-04-2026",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 203,
+      "type": "interest"
+    },
+    {
+      "date": "01-05-2026",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 205,
+      "type": "interest"
+    },
+    {
+      "date": "01-06-2026",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 207,
+      "type": "interest"
+    },
+    {
+      "date": "01-07-2026",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 209,
+      "type": "interest"
+    },
+    {
+      "date": "01-08-2026",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 211,
+      "type": "interest"
+    },
+    {
+      "date": "01-09-2026",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 213,
+      "type": "interest"
+    },
+    {
+      "date": "01-10-2026",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 215,
+      "type": "interest"
     }
   ],
   "expenses": [
