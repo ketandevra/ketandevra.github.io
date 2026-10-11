@@ -1,15 +1,17 @@
 'use client';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import CountUp from 'react-countup';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import AnimatedAmount from '@/components/AnimatedAmount';
+import useAccountsSummary from '@/components/useAccountsSummary';
+import { formatInr } from '@/lib/accounts';
 
 export default function Income() {
+  const summary = useAccountsSummary();
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
-    // Check if we've animated before in this session
     const hasAnimated = sessionStorage.getItem('incomeAnimated');
     if (!hasAnimated) {
       setShouldAnimate(true);
@@ -17,218 +19,19 @@ export default function Income() {
     }
   }, []);
 
-  const incomeData = {
-    totalAmount: 160172,
-    receivedAmount: 148000,
-    interestEarned: 12172,
-    incomes: [
-        {
-            "serialNumber": "1",
-            "date": "11-08-2024",
-            "name": "रमेश परिहार (साबु) से प्राप्त",
-            "description": "Received from Ramesh Parihar (Saabu)",
-            "amount": "50,000"
-        },
-        {
-            "serialNumber": "2",
-            "date": "01-09-2024",
-            "name": "ब्याज अर्जित",
-            "description": "Interest Earned",
-            "amount": "355"
-        },
-        {
-            "serialNumber": "3",
-            "date": "01-10-2024",
-            "name": "ब्याज अर्जित",
-            "description": "Interest Earned",
-            "amount": "358"
-        },
-        {
-            "serialNumber": "4",
-            "date": "09-10-2024",
-            "name": "रमेश परिहार (साबु) से प्राप्त",
-            "description": "Received from Ramesh Parihar (Saabu)",
-            "amount": "49,000"
-        },
-        {
-            "serialNumber": "5",
-            "date": "14-10-2024",
-            "name": "रमेश परिहार (साबु) से प्राप्त",
-            "description": "Received from Ramesh Parihar (Saabu)",
-            "amount": "49,000"
-        },
-        {
-            "serialNumber": "6",
-            "date": "01-11-2024",
-            "name": "ब्याज अर्जित",
-            "description": "Interest Earned",
-            "amount": "1342"
-        },
-        {
-            "serialNumber": "7",
-            "date": "01-12-2024",
-            "name": "ब्याज अर्जित",
-            "description": "Interest Earned",
-            "amount": "1,355"
-        },
-        {
-            "serialNumber": "8",
-            "date": "01-01-2025",
-            "name": "ब्याज अर्जित",
-            "description": "Interest Earned",
-            "amount": "959"
-        },
-        {
-            "serialNumber": "9",
-            "date": "01-02-2025",
-            "name": "ब्याज अर्जित",
-            "description": "Interest Earned",
-            "amount": "968"
-        },
-        {
-          "serialNumber": "10",
-          "date": "01-03-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "946"
-        },
-        {
-          "serialNumber": "11",
-          "date": "01-04-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "889"
-        },
-        {
-          "serialNumber": "12",
-          "date": "01-05-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "898"
-        },
-        {
-          "serialNumber": "13",
-          "date": "01-06-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "907"
-        },
-        {
-          "serialNumber": "14",
-          "date": "01-07-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "185"
-        },
-        {
-          "serialNumber": "15",
-          "date": "01-08-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "187"
-        },
-        {
-          "serialNumber": "16",
-          "date": "01-09-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "189"
-        },
-        {
-          "serialNumber": "17",
-          "date": "01-10-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "191"
-        },
-        {
-          "serialNumber": "18",
-          "date": "01-11-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "193"
-        },
-        {
-          "serialNumber": "19",
-          "date": "01-12-2025",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "195"
-        },
-        {
-          "serialNumber": "20",
-          "date": "01-01-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "197"
-        },
-        {
-          "serialNumber": "21",
-          "date": "01-02-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "199"
-        },
-        {
-          "serialNumber": "22",
-          "date": "01-03-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-            "amount": "201"
-        },
-        {
-          "serialNumber": "23",
-          "date": "01-04-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "203"
-        },
-        {
-          "serialNumber": "24",
-          "date": "01-05-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "205"
-        },
-        {
-          "serialNumber": "25",
-          "date": "01-06-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "207"
-        },
-        {
-          "serialNumber": "26",
-          "date": "01-07-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "209"
-        },
-        {
-          "serialNumber": "27",
-          "date": "01-08-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "211"
-        },
-        {
-          "serialNumber": "28",
-          "date": "01-09-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "213"
-        },
-        {
-          "serialNumber": "29",
-          "date": "01-10-2026",
-          "name": "ब्याज अर्जित",
-          "description": "Interest Earned",
-          "amount": "215"
-        }
-    ]
-  };
+  const incomeData = summary
+    ? {
+        totalAmount: summary.totalIncome,
+        receivedAmount: summary.receivedAmount,
+        interestEarned: summary.interestEarned,
+        incomes: summary.incomes,
+      }
+    : null;
+
 
   const exportToPDF = () => {
+    if (!incomeData) return;
+
     const doc = new jsPDF();
     
     // Use default font
@@ -248,9 +51,9 @@ export default function Income() {
     
     // Summary boxes
     doc.setFontSize(12);
-    doc.text(`Received Amount: ${incomeData.receivedAmount.toLocaleString()}`, 20, 60);
-    doc.text(`Total Interest Earned: ${incomeData.interestEarned.toLocaleString()}`, 20, 70);
-    doc.text(`Total Amount: ${incomeData.totalAmount.toLocaleString()}`, 20, 80);
+    doc.text(`Received Amount: ${formatInr(incomeData.receivedAmount)}`, 20, 60);
+    doc.text(`Total Interest Earned: ${formatInr(incomeData.interestEarned)}`, 20, 70);
+    doc.text(`Total Amount: ${formatInr(incomeData.totalAmount)}`, 20, 80);
 
     // Table
     autoTable(doc, {
@@ -260,7 +63,7 @@ export default function Income() {
         income.serialNumber,
         income.date,
         income.description,
-        income.amount
+        formatInr(income.amount)
       ]),
       styles: {
         fontSize: 10
@@ -342,46 +145,19 @@ export default function Income() {
               <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300">
                 <h3 className="text-lg font-medium text-green-900 dark:text-green-300">प्राप्त राशि</h3>
                 <p className="text-3xl font-bold text-green-800 dark:text-green-400">
-                  ₹{!shouldAnimate ? (
-                    "148,000"
-                  ) : (
-                    <CountUp 
-                      end={incomeData.receivedAmount} 
-                      duration={2.5}
-                      separator=","
-                      preserveValue={true}
-                    />
-                  )}
+                  ₹<AnimatedAmount amount={incomeData?.receivedAmount ?? null} animate={shouldAnimate && incomeData != null} />
                 </p>
               </div>
               <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300">
                 <h3 className="text-lg font-medium text-blue-900 dark:text-blue-300">कुल ब्याज अर्जित</h3>
                 <p className="text-3xl font-bold text-blue-800 dark:text-blue-400">
-                  ₹{!shouldAnimate ? (
-                    "12,172"
-                  ) : (
-                    <CountUp 
-                      end={incomeData.interestEarned} 
-                      duration={2.5}
-                      separator=","
-                      preserveValue={true}
-                    />
-                  )}
+                  ₹<AnimatedAmount amount={incomeData?.interestEarned ?? null} animate={shouldAnimate && incomeData != null} />
                 </p>
               </div>
               <div className="bg-purple-100 dark:bg-purple-900/30 p-4 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300">
                 <h3 className="text-lg font-medium text-purple-900 dark:text-purple-300">कुल राशि</h3>
                 <p className="text-3xl font-bold text-purple-800 dark:text-purple-400">
-                  ₹{!shouldAnimate ? (
-                    "1,60,172"
-                  ) : (
-                    <CountUp 
-                      end={incomeData.totalAmount} 
-                      duration={2.5}
-                      separator=","
-                      preserveValue={true}
-                    />
-                  )}
+                  ₹<AnimatedAmount amount={incomeData?.totalAmount ?? null} animate={shouldAnimate && incomeData != null} />
                 </p>
               </div>
             </div>
@@ -411,13 +187,13 @@ export default function Income() {
                 </tr>
               </thead>
               <tbody>
-                {[...incomeData.incomes].reverse().map((income, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700/50' : 'bg-white dark:bg-gray-800'}>
+                {(incomeData ? [...incomeData.incomes].reverse() : []).map((income, index) => (
+                  <tr key={income.serialNumber} className={index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700/50' : 'bg-white dark:bg-gray-800'}>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{income.serialNumber}</td>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{income.date}</td>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{income.name}</td>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{income.description}</td>
-                    <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">₹{income.amount}</td>
+                    <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">₹{formatInr(income.amount)}</td>
                   </tr>
                 ))}
               </tbody>

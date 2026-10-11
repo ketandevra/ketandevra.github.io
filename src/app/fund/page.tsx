@@ -1,13 +1,14 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import CountUp from 'react-countup';
+import AnimatedAmount from '@/components/AnimatedAmount';
+import useAccountsSummary from '@/components/useAccountsSummary';
 
 export default function Fund() {
+  const summary = useAccountsSummary();
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
-    // Check if we've animated before in this session
     const hasAnimated = sessionStorage.getItem('fundAnimated');
     if (!hasAnimated) {
       setShouldAnimate(true);
@@ -20,7 +21,6 @@ export default function Fund() {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">कोष विवरण</h1>
         <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-        {/* <p className="mt-4 text-lg text-black">समाज पर समर्पित समिति सदस्यों की टीम</p> */}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Link href="/income" className="block">
@@ -33,16 +33,7 @@ export default function Fund() {
               <div className="p-4 bg-green-50 dark:bg-green-900/30 rounded-lg">
                 <h3 className="font-medium mb-2 text-green-800 dark:text-green-400">कुल राशि</h3>
                 <p className="text-xl font-bold text-green-700 dark:text-green-400">
-                  ₹{!shouldAnimate ? (
-                    "1,60,172"
-                  ) : (
-                    <CountUp 
-                      end={159957} 
-                      duration={2.5}
-                      separator="," 
-                      onEnd={() => setShouldAnimate(false)}
-                    />
-                  )}
+                  ₹<AnimatedAmount amount={summary?.totalIncome ?? null} animate={shouldAnimate && summary != null} />
                 </p>
               </div>
             </div>
@@ -59,16 +50,7 @@ export default function Fund() {
               <div className="p-4 bg-red-50 dark:bg-red-900/30 rounded-lg">
                 <h3 className="font-medium mb-2 text-red-800 dark:text-red-400">खर्च राशि</h3>
                 <p className="text-xl font-bold text-red-700 dark:text-red-400">
-                  ₹{!shouldAnimate ? (
-                    "1,38,446"
-                  ) : (
-                    <CountUp 
-                      end={138446} 
-                      duration={2.5} 
-                      separator="," 
-                      onEnd={() => setShouldAnimate(false)}
-                    />
-                  )}
+                  ₹<AnimatedAmount amount={summary?.totalExpenses ?? null} animate={shouldAnimate && summary != null} />
                 </p>
               </div>
             </div>
@@ -84,16 +66,7 @@ export default function Fund() {
               <div className="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
                 <h3 className="font-medium mb-2 text-blue-800 dark:text-blue-400">शेष राशि</h3>
                 <p className="text-xl font-bold text-blue-700 dark:text-blue-400">
-                  ₹{!shouldAnimate ? (
-                    "21,726"
-                  ) : (
-                    <CountUp 
-                      end={21726} 
-                      duration={2.5}
-                      separator="," 
-                      onEnd={() => setShouldAnimate(false)}
-                    />
-                  )}
+                  ₹<AnimatedAmount amount={summary?.balance ?? null} animate={shouldAnimate && summary != null} />
                 </p>
               </div>
             </div>

@@ -1,14 +1,19 @@
 'use client';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import CountUp from 'react-countup';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import AnimatedAmount from '@/components/AnimatedAmount';
+import useAccountsSummary from '@/components/useAccountsSummary';
+import { formatInr } from '@/lib/accounts';
 
 export default function Expenses() {
+  const summary = useAccountsSummary();
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   const exportToPDF = () => {
+    if (!summary) return;
+
     const doc = new jsPDF();
     
     // Use default font
@@ -28,17 +33,17 @@ export default function Expenses() {
     
     // Summary box
     doc.setFontSize(12);
-    doc.text(`Total Expenses: ${expensesData.totalExpenses.toLocaleString()}`, 20, 60);
+    doc.text(`Total Expenses: ${formatInr(summary.totalExpenses)}`, 20, 60);
 
     // Table
     autoTable(doc, {
       startY: 70,
       head: [['Sr. No.', 'Date', 'Particulars', 'Amount']],
-      body: expensesData.expenses.map(expense => [
+      body: summary.expenses.map(expense => [
         expense.serialNumber,
         expense.date,
         expense.description,
-        expense.amount
+        formatInr(expense.amount)
       ]),
       styles: {
         fontSize: 10
@@ -70,102 +75,6 @@ export default function Expenses() {
     }
   }, []);
   
-  const expensesData = {
-    totalExpenses: 138446,
-    expenses: [
-      {
-        serialNumber: "1",
-        date: "24-07-2024",
-        name: "स्मार्ट कार्ड कैंप पर खर्च",
-        description: "Expenses on smart card camp",
-        amount: "170"
-      },
-      {
-        serialNumber: "2",
-        date: "06-08-2024",
-        name: "दूध पैकेट्स",
-        description: "Milk packets",
-        amount: "4,000"
-      },
-      {
-        serialNumber: "3",
-        date: "10-08-2024",
-        name: "बिस्किट पैकेट",
-        description: "Expenses on Biscuit Packet",
-        amount: "1,280"
-      },
-      {
-        serialNumber: "4",
-        date: "10-08-2024",
-        name: "HSRP कैंप पर खर्च",
-        description: "Expenses on HSRP camp",
-        amount: "1,000"
-      },
-      {
-        serialNumber: "5",
-        date: "25-08-2024",
-        name: "रामदेवरा यात्रियों के लिए पोहा",
-        description: "Poha for Ramdevra travelers",
-        amount: "8,100"
-      },
-      {
-        serialNumber: "6",
-        date: "29-12-2024",
-        name: "घाँची युवा महासभा प्रीमियर लीग",
-        description: "घाँची युवा महासभा प्रीमियर लीग",
-        amount: "41,000"
-      },
-      {
-        serialNumber: "7",
-        date: "22-02-2025",
-        name: "मदन जी के लिए आतिशबाजी",
-        description: "Fireworks for Madan Ji",
-        amount: "3,200"
-      },
-      {
-        serialNumber: "8",
-        date: "02-03-2025",
-        name: "पेपर बोट जूस - भूतेश्वर मंदिर, सूरजपोल",
-        description: "Paper Boat Juice - Bhuteshwar Mandir, Surajpole",
-        amount: "960"
-      },
-      {
-        serialNumber: "9",
-        date: "04-03-2025",
-        name: "माला एवं साफा मदन जी के लिए",
-        description: "Mala and Safa for Madan Ji",
-        amount: "1,400"
-      },
-      {
-        serialNumber: "10",
-        date: "10-03-2025",
-        name: "पेपर बोट जूस - घाँचीयो का बड़ा बास",
-        description: "Paper Boat Juice - Ghachiyo Ka Bada Baas",
-        amount: "2,050"
-      },
-      {
-        serialNumber: "11",
-        date: "13-03-2025",
-        name: "पेपर बोट जूस - भलावतो का बास",
-        description: "Paper Boat Juice - Bhalaavato Ka Baas",
-        amount: "1,128"
-      },
-      {
-        serialNumber: "12",
-        date: "14-03-2025",
-        name: "पेपर बोट जूस - रजत नगर, रामदेव रोड",
-        description: "Paper Boat Juice - Rajat Nagar, Ramdev Road",
-        amount: "1,000"
-      },
-      {
-        serialNumber: "13",
-        date: "09-06-2025",
-        name: "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
-        description: "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
-        amount: "73,030"
-      }
-    ]
-  };
 
   return (
     <main className="px-4 py-8 overflow-x-hidden">
@@ -214,16 +123,7 @@ export default function Expenses() {
               <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-shadow duration-300">
                 <h3 className="text-lg font-medium text-red-900 dark:text-red-300">खर्च राशि</h3>
                 <p className="text-3xl font-bold text-red-800 dark:text-red-400">
-                  ₹{!shouldAnimate ? (
-                    "1,38,446"
-                  ) : (
-                    <CountUp 
-                      end={expensesData.totalExpenses} 
-                      duration={2.5}
-                      separator=","
-                      preserveValue={true}
-                    />
-                  )}
+                  ₹<AnimatedAmount amount={summary?.totalExpenses ?? null} animate={shouldAnimate && summary != null} />
                 </p>
               </div>
             </div>
@@ -253,13 +153,13 @@ export default function Expenses() {
                 </tr>
               </thead>
               <tbody>
-                {[...expensesData.expenses].reverse().map((expense, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700/50' : 'bg-white dark:bg-gray-800'}>
+                {(summary ? [...summary.expenses].reverse() : []).map((expense, index) => (
+                  <tr key={expense.serialNumber} className={index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700/50' : 'bg-white dark:bg-gray-800'}>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{expense.serialNumber}</td>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{expense.date}</td>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{expense.name}</td>
                     <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">{expense.description}</td>
-                    <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">₹{expense.amount}</td>
+                    <td className="border border-gray-200 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-300">₹{formatInr(expense.amount)}</td>
                   </tr>
                 ))}
               </tbody>

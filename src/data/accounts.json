@@ -1,0 +1,182 @@
+{
+  "monthlyInterest": {
+    "name": "ब्याज अर्जित",
+    "description": "Interest Earned",
+    "startDate": "01-07-2025",
+    "startAmount": 185,
+    "monthlyIncrease": 2
+  },
+  "incomes": [
+    {
+      "date": "11-08-2024",
+      "name": "रमेश परिहार (साबु) से प्राप्त",
+      "description": "Received from Ramesh Parihar (Saabu)",
+      "amount": 50000,
+      "type": "receipt"
+    },
+    {
+      "date": "01-09-2024",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 355,
+      "type": "interest"
+    },
+    {
+      "date": "01-10-2024",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 358,
+      "type": "interest"
+    },
+    {
+      "date": "09-10-2024",
+      "name": "रमेश परिहार (साबु) से प्राप्त",
+      "description": "Received from Ramesh Parihar (Saabu)",
+      "amount": 49000,
+      "type": "receipt"
+    },
+    {
+      "date": "14-10-2024",
+      "name": "रमेश परिहार (साबु) से प्राप्त",
+      "description": "Received from Ramesh Parihar (Saabu)",
+      "amount": 49000,
+      "type": "receipt"
+    },
+    {
+      "date": "01-11-2024",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 1342,
+      "type": "interest"
+    },
+    {
+      "date": "01-12-2024",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 1355,
+      "type": "interest"
+    },
+    {
+      "date": "01-01-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 959,
+      "type": "interest"
+    },
+    {
+      "date": "01-02-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 968,
+      "type": "interest"
+    },
+    {
+      "date": "01-03-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 946,
+      "type": "interest"
+    },
+    {
+      "date": "01-04-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 889,
+      "type": "interest"
+    },
+    {
+      "date": "01-05-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 898,
+      "type": "interest"
+    },
+    {
+      "date": "01-06-2025",
+      "name": "ब्याज अर्जित",
+      "description": "Interest Earned",
+      "amount": 907,
+      "type": "interest"
+    }
+  ],
+  "expenses": [
+    {
+      "date": "24-07-2024",
+      "name": "स्मार्ट कार्ड कैंप पर खर्च",
+      "description": "Expenses on smart card camp",
+      "amount": 170
+    },
+    {
+      "date": "06-08-2024",
+      "name": "दूध पैकेट्स",
+      "description": "Milk packets",
+      "amount": 4000
+    },
+    {
+      "date": "10-08-2024",
+      "name": "बिस्किट पैकेट",
+      "description": "Expenses on Biscuit Packet",
+      "amount": 1280
+    },
+    {
+      "date": "10-08-2024",
+      "name": "HSRP कैंप पर खर्च",
+      "description": "Expenses on HSRP camp",
+      "amount": 1000
+    },
+    {
+      "date": "25-08-2024",
+      "name": "रामदेवरा यात्रियों के लिए पोहा",
+      "description": "Poha for Ramdevra travelers",
+      "amount": 8100
+    },
+    {
+      "date": "29-12-2024",
+      "name": "घाँची युवा महासभा प्रीमियर लीग",
+      "description": "घाँची युवा महासभा प्रीमियर लीग",
+      "amount": 41000
+    },
+    {
+      "date": "22-02-2025",
+      "name": "मदन जी के लिए आतिशबाजी",
+      "description": "Fireworks for Madan Ji",
+      "amount": 3200
+    },
+    {
+      "date": "02-03-2025",
+      "name": "पेपर बोट जूस - भूतेश्वर मंदिर, सूरजपोल",
+      "description": "Paper Boat Juice - Bhuteshwar Mandir, Surajpole",
+      "amount": 960
+    },
+    {
+      "date": "04-03-2025",
+      "name": "माला एवं साफा मदन जी के लिए",
+      "description": "Mala and Safa for Madan Ji",
+      "amount": 1400
+    },
+    {
+      "date": "10-03-2025",
+      "name": "पेपर बोट जूस - घाँचीयो का बड़ा बास",
+      "description": "Paper Boat Juice - Ghachiyo Ka Bada Baas",
+      "amount": 2050
+    },
+    {
+      "date": "13-03-2025",
+      "name": "पेपर बोट जूस - भलावतो का बास",
+      "description": "Paper Boat Juice - Bhalaavato Ka Baas",
+      "amount": 1128
+    },
+    {
+      "date": "14-03-2025",
+      "name": "पेपर बोट जूस - रजत नगर, रामदेव रोड",
+      "description": "Paper Boat Juice - Rajat Nagar, Ramdev Road",
+      "amount": 1128
+    },
+    {
+      "date": "09-06-2025",
+      "name": "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
+      "description": "हायर एजुकेशन गाइडेंस सेमिनार प्रतिभा सम्मान समारोह - 2025",
+      "amount": 73030
+    }
+  ]
+}
